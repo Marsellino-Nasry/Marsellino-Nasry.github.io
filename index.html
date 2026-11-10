@@ -1,747 +1,906 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SARM | Elite Cybersecurity Services & Offensive Security</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark-navy: #0a192f;
-            --bg-darker-navy: #020c1b;
-            --text-slate-light: #ccd6f6;
-            --text-slate-dark: #8892b0;
-            --highlight-teal: #64ffda;
-            --highlight-teal-darker: #138270;
-            --card-navy: rgba(10, 25, 47, 0.75);
-            --card-border: rgba(100, 255, 218, 0.1);
-            --glow-shadow: 0 0 25px rgba(100, 255, 218, 0.15), 0 0 40px rgba(100, 255, 218, 0.1);
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marsellino Nasry Mounir | Senior IT Auditor &amp; Offensive Security Specialist | SARM Security</title>
+  <meta name="description" content="Marsellino Nasry Mounir is a Senior IT Auditor at BDO Khaled &amp; Co. and cybersecurity specialist who combines offensive security and red teaming with risk-based IT audit, ITGC, and ISO/IEC 27001 assurance.">
+  <meta name="author" content="Marsellino Nasry Mounir">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#06101C">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'self'; object-src 'none'">
+  <link rel="canonical" href="https://marsellino-nasry.github.io/">
 
-        html {
-             scrollbar-width: thin;
-             scrollbar-color: var(--highlight-teal-darker) var(--bg-darker-navy);
-        }
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="SARM Security">
+  <meta property="og:title" content="Marsellino Nasry Mounir | Senior IT Auditor &amp; Offensive Security Specialist">
+  <meta property="og:description" content="Bridging offensive security and enterprise technology assurance: penetration testing, red teaming, ITGC audit, and ISO/IEC 27001.">
+  <meta property="og:url" content="https://marsellino-nasry.github.io/">
+  <meta property="og:image" content="https://marsellino-nasry.github.io/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Marsellino Nasry Mounir, Senior IT Auditor and cybersecurity specialist, with the SARM Security logo">
+  <meta property="profile:first_name" content="Marsellino">
+  <meta property="profile:last_name" content="Nasry Mounir">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marsellino Nasry Mounir | Senior IT Auditor &amp; Offensive Security Specialist">
+  <meta name="twitter:description" content="Bridging offensive security and enterprise technology assurance.">
+  <meta name="twitter:image" content="https://marsellino-nasry.github.io/assets/images/og-image.png">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-darker-navy);
-            color: var(--text-slate-light);
-            overflow-x: hidden;
-        }
+  <!-- Icons -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-        .font-mono {
-            font-family: 'Share Tech Mono', monospace;
-        }
-        
-        #interactive-bg {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
+  <link rel="preload" href="assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 
-        .glass-card {
-            background: var(--card-navy);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--card-border);
-            border-radius: 0.75rem;
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            transform-style: preserve-3d;
-        }
-        
-        .glass-card-inner {
-             transform: translateZ(20px);
-        }
-        
-        .section-title {
-            font-weight: 800;
-            font-size: clamp(2rem, 5vw, 2.75rem);
-            color: #e2e8f0;
-        }
-        
-        .section-subtitle {
-            font-size: 1.125rem;
-            color: var(--text-slate-dark);
-            max-width: 45rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .scroll-animate {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .scroll-animate.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .tab-button.active {
-            color: var(--highlight-teal);
-            border-bottom-color: var(--highlight-teal);
-            background-color: rgba(100, 255, 218, 0.1);
-        }
-        .tab-panel { display: none; }
-        .tab-panel.active { display: grid; }
-        
-        .workflow-step { position: relative; padding-left: 3rem; }
-        .workflow-step:not(:last-child) { padding-bottom: 2.5rem; }
-        .workflow-step:not(:last-child)::before {
-            content: '';
-            position: absolute;
-            left: 1rem;
-            top: 2.5rem; 
-            width: 2px;
-            height: calc(100% - 1.5rem); 
-            background-color: var(--card-border);
-        }
-        .workflow-step::after {
-            content: counter(step);
-            counter-increment: step;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2rem;
-            height: 2rem;
-            border: 2px solid var(--highlight-teal);
-            border-radius: 50%;
-            background-color: var(--bg-dark-navy);
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1rem;
-            color: var(--highlight-teal);
-        }
-        
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item[open] summary .plus-icon { transform: rotate(45deg); }
-        .faq-item[open] summary { color: var(--highlight-teal); }
-
-        .terminal-window {
-            background-color: #011627;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-            font-family: 'Share Tech Mono', monospace;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-        
-        .terminal-window:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: var(--glow-shadow);
-        }
-
-        .blinking-cursor {
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { opacity: 0; }
-            50% { opacity: 1; }
-        }
-    </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marsellino Nasry Mounir",
+    "alternateName": "Marsellino Nasry",
+    "jobTitle": "Senior IT Auditor",
+    "worksFor": { "@type": "Organization", "name": "BDO Khaled & Co." },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Modern Academy for Computer Science" },
+    "url": "https://marsellino-nasry.github.io/",
+    "image": "https://marsellino-nasry.github.io/assets/images/profile.jpg",
+    "email": "mailto:marsellino.nasry@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/marsellino-nasry/",
+      "https://github.com/Marsellino-Nasry",
+      "https://tryhackme.com/p/Marsellino",
+      "https://linktr.ee/Marsellino.Nasry"
+    ],
+    "knowsAbout": ["IT General Controls", "IT audit", "ISO/IEC 27001", "Penetration testing", "Red teaming", "IT risk management", "COBIT 2019", "NIST Cybersecurity Framework", "MITRE ATT&CK"]
+  }
+  </script>
 </head>
-<body class="antialiased">
+<body>
+  <!-- Icon sprite: referenced with <use>, never rendered on its own -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="g-mark" x1="0" y1="169" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#12808A"/><stop offset="0.55" stop-color="#36D1BE"/><stop offset="1" stop-color="#7AD3F5"/>
+      </linearGradient>
+      <symbol id="i-mark" viewBox="-2 -2 104 173">
+        <g fill="url(#g-mark)" stroke="url(#g-mark)" stroke-width="2.4" stroke-linejoin="round">
+          <path d="M0 39 L50 0 L100 39 L100 73 L50 34 L0 73 Z"/>
+          <path d="M0 87 L50 48 L100 87 L100 121 L50 82 L0 121 Z"/>
+          <path d="M0 135 L50 96 L100 135 L100 169 L50 130 L0 169 Z"/>
+        </g>
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 100 74"><path d="M0 39 L50 0 L100 39 L100 73 L50 34 L0 73 Z" fill="currentColor"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></g></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M3 13h18"/></g></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></g></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></g></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.6L4 20.5l1-3.9A8.5 8.5 0 1 1 20.5 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+      <symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></g></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></g></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></g></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></g></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
 
-    <canvas id="interactive-bg"></canvas>
-    <div class="relative z-10">
-        <!-- Header & Navigation -->
-        <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
-            <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-                <a href="#" class="font-mono text-4xl font-black text-white group">
-                    <span class="text-slate-500 group-hover:text-highlight-teal transition-colors duration-300">&lt;&lt;&lt;</span>
-                    <span class="mx-2 text-white group-hover:text-highlight-teal transition-colors duration-300">SARM</span>
-                    <span class="text-slate-500 group-hover:text-highlight-teal transition-colors duration-300">&gt;&gt;&gt;</span>
-                </a>
-                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-mono">
-                    <a href="#services" class="text-sm text-slate-300 hover:text-highlight-teal transition-colors">01. Services</a>
-                    <a href="#arsenal" class="text-sm text-slate-300 hover:text-highlight-teal transition-colors">02. Arsenal</a>
-                    <a href="#compliance" class="text-sm text-slate-300 hover:text-highlight-teal transition-colors">03. Compliance</a>
-                    <a href="#contact" class="text-sm bg-transparent text-highlight-teal border border-highlight-teal rounded-md px-4 py-2 hover:bg-highlight-teal/10 transition-colors">04. Contact</a>
-                </div>
-                 <button id="menu-btn" class="md:hidden z-50 p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-highlight-teal"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                 </button>
-            </nav>
-        </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-dark-navy/95 backdrop-blur-sm z-40">
-            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-mono">
-                <a href="#services" class="mobile-nav-link text-slate-300 hover:text-highlight-teal">01. Services</a>
-                <a href="#arsenal" class="mobile-nav-link text-slate-300 hover:text-highlight-teal">02. Arsenal</a>
-                <a href="#compliance" class="mobile-nav-link text-slate-300 hover:text-highlight-teal">03. Compliance</a>
-                <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-highlight-teal">04. Contact</a>
-            </div>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="SARM Security, back to top">
+        <svg class="brand__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+        <span class="brand__word">SARM</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+        <ul class="site-nav__list" id="site-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li class="site-nav__cta"><a class="btn btn--small btn--outline" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1 class="hero__name" id="hero-title">Marsellino Nasry Mounir</h1>
+          <p class="hero__role">Senior IT Auditor, cybersecurity specialist, and offensive security practitioner focused on red teaming and technology risk.</p>
+          <p class="hero__statement">I bridge offensive security and enterprise technology assurance. I combine hands-on adversarial testing with risk-based IT auditing to find the weaknesses an attacker would use, judge whether controls actually work, and help organizations become more resilient.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">See my work</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+          <dl class="hero__facts">
+            <div><dt>Current role</dt><dd>Senior IT Auditor, BDO Khaled &amp; Co.</dd></div>
+            <div><dt>Audit record</dt><dd>30+ ITGC and cybersecurity audits</dd></div>
+            <div><dt>TryHackMe</dt><dd>Top 1% worldwide</dd></div>
+          </dl>
         </div>
 
-        <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center p-4">
-            <div class="text-left scroll-animate max-w-4xl pt-20">
-                <p class="font-mono text-lg text-highlight-teal mb-4">Marsellino Nasry // SARM Security</p>
-                <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-[3.5rem] leading-tight font-black text-white tracking-tighter h-32 md:h-24">
-                </h1>
-                <p class="mt-6 max-w-2xl text-lg text-slate-300">
-                    I don't just find vulnerabilities; I quantify their business impact. I partner with organizations to transform security from a technical liability into a strategic advantage, ensuring resilience, compliance, and stakeholder trust.
-                </p>
-                <div class="mt-10">
-                    <a href="#contact" class="font-mono bg-highlight-teal text-slate-900 font-bold py-4 px-8 rounded-lg hover:bg-teal-300 transition-transform hover:scale-105 duration-300 text-lg shadow-lg shadow-highlight-teal/20">Initiate Contact &gt;</a>
+        <figure class="portrait">
+          <svg class="portrait__chevrons" viewBox="0 0 100 72" aria-hidden="true" focusable="false">
+            <path class="portrait__chev portrait__chev--top" d="M0 39 L50 0 L100 39 L100 49 L50 10 L0 49 Z"/>
+            <path class="portrait__chev portrait__chev--mid" d="M0 55 L50 16 L100 55 L100 65 L50 26 L0 65 Z"/>
+          </svg>
+          <div class="portrait__frame">
+            <picture>
+              <source type="image/webp" srcset="assets/images/profile-480.webp 480w, assets/images/profile.webp 820w" sizes="(min-width: 960px) 420px, 78vw">
+              <img src="assets/images/profile.jpg" width="820" height="1025" alt="Portrait of Marsellino Nasry Mounir in a dark suit and tie" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+          <svg class="portrait__rim" viewBox="0 0 100 72" aria-hidden="true" focusable="false">
+            <path d="M0 71 L50 32 L100 71" fill="none" vector-effect="non-scaling-stroke"/>
+          </svg>
+          <figcaption class="visually-hidden">Marsellino Nasry Mounir</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="about-title">Two disciplines, one view of risk</h2>
+          <p class="section__lede">Most security work looks at a system from one side. My work looks at it from both: how it would be attacked, and whether the controls around it would hold.</p>
+        </header>
+
+        <div class="about">
+          <div class="about__bio prose">
+            <p>I'm a Senior IT Auditor at BDO Khaled &amp; Co. (BDO Egypt) with more than five years of experience across banking, petroleum, and corporate environments. My work sits where technical security meets governance: I assess whether technology controls are designed well and operate as intended, and I test whether they stand up to a real attacker.</p>
+            <p>On the assurance side, I deliver IT General Controls audits, IT risk assessments, Test of Design and Test of Operating Effectiveness procedures, and Risk and Control Matrix development. I've assessed identity and privileged access, segregation of duties, change management, IT operations, business continuity, and vulnerability management across core banking, ERP, and directory environments, aligned with ISO/IEC 27001, COBIT 2019, COSO, NIST, and PCI DSS.</p>
+            <p>On the offensive side, I practise web, network, and Active Directory penetration testing, red team techniques, and responsible vulnerability research through bug bounty programmes. That hands-on work, which places me in the top 1% of TryHackMe users worldwide, shapes how I audit: findings are grounded in how weaknesses are actually exploited, and recommendations are ranked by business impact.</p>
+            <p>I also build tools. My ISO/IEC 27001:2022 ISMS Assurance Platform supports audit and certification-readiness work end to end, and the SARM Security Arsenal automates reconnaissance, vulnerability analysis, and CVE intelligence for my own assessments.</p>
+          </div>
+
+          <aside class="lens" aria-labelledby="lens-title">
+            <h3 class="lens__title" id="lens-title">The same weakness, seen twice</h3>
+            <table class="lens__table">
+              <thead>
+                <tr><th scope="col">Adversary view</th><th scope="col">Assurance view</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>A dormant admin account that still logs in.</td><td>Would joiner, mover, leaver and access review controls have removed it?</td></tr>
+                <tr><td>A path from a standard user to domain admin.</td><td>Is privileged access restricted, segregated, and monitored?</td></tr>
+                <tr><td>A published CVE on an exposed service.</td><td>Does vulnerability management detect, rate, and patch it within SLA?</td></tr>
+                <tr><td>An unapproved change pushed to production.</td><td>Are changes approved, tested, and deployed by someone other than the developer?</td></tr>
+              </tbody>
+            </table>
+          </aside>
+        </div>
+
+        <div class="method" aria-labelledby="method-title">
+          <h3 class="method__title" id="method-title">How I work</h3>
+          <p class="method__note">The three arrows in the SARM mark stand for these three stages.</p>
+          <ol class="method__steps">
+            <li class="method__step">
+              <svg class="method__icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+              <h4>Assess</h4>
+              <p>Understand the business, scope the environment, and evaluate control design against ISO/IEC 27001, COBIT, and COSO. The result is a gap view ranked by risk.</p>
+            </li>
+            <li class="method__step">
+              <svg class="method__icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+              <h4>Validate</h4>
+              <p>Test how controls perform in practice: operating-effectiveness sampling, vulnerability assessment, and penetration testing that shows what an adversary could actually reach.</p>
+            </li>
+            <li class="method__step">
+              <svg class="method__icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+              <h4>Assure</h4>
+              <p>Report findings in business terms, agree remediation with control owners, and confirm that fixes hold. Management gets the risk picture; technical teams get what they need to act.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="experience-title">Experience</h2>
+          <p class="section__lede">Enterprise IT audit at BDO, built on years of hands-on offensive security practice.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item timeline__item--current">
+            <div class="timeline__when"><time datetime="2024-08">Aug 2024</time> to present</div>
+            <article class="timeline__body">
+              <h3 class="timeline__role">Senior IT Auditor</h3>
+              <p class="timeline__org">BDO Khaled &amp; Co. (BDO Egypt), Information Technology Audit</p>
+              <p class="timeline__summary">I deliver IT audit and cybersecurity assurance engagements for clients in banking and financial services, petroleum and energy, and the corporate sector.</p>
+              <ul class="ticks">
+                <li>Delivered more than 30 ITGC, information security, and cybersecurity audits.</li>
+                <li>Perform Test of Design and Test of Operating Effectiveness procedures, and develop and assess Risk and Control Matrices.</li>
+                <li>Run IT risk assessments and control maturity evaluations, including COBIT 2019 and COSO-aligned reviews.</li>
+                <li>Report risk-based findings with practical recommendations that management can act on.</li>
+              </ul>
+              <div class="timeline__facets">
+                <div>
+                  <h4>Control areas assessed</h4>
+                  <ul class="tags">
+                    <li>Identity and access management</li><li>Single sign-on</li><li>Privileged access</li><li>Segregation of duties</li><li>Change management</li><li>IT operations and infrastructure</li><li>BCP and DR</li><li>Vulnerability management</li><li>Security monitoring</li><li>Cybersecurity governance</li>
+                  </ul>
                 </div>
+                <div>
+                  <h4>Environments audited</h4>
+                  <ul class="tags">
+                    <li>Core banking</li><li>SAP</li><li>Oracle</li><li>Microsoft Dynamics 365</li><li>Microsoft Entra ID</li><li>Active Directory</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="timeline__note"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-lock"/></svg>Client names, audit evidence, and findings are confidential and not shown here.</p>
+            </article>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__when">Independent practice</div>
+            <article class="timeline__body">
+              <h3 class="timeline__role">Offensive security and bug bounty</h3>
+              <p class="timeline__org">Penetration testing, red teaming, and responsible disclosure</p>
+              <ul class="ticks">
+                <li>Researched and reported vulnerabilities through bug bounty programmes under each programme's rules of engagement.</li>
+                <li>Practised web, API, network, wireless, and Active Directory attack techniques in authorized lab environments.</li>
+                <li>Built the SARM Security Arsenal to automate reconnaissance, vulnerability correlation, and CVE intelligence.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__when">Continuous training</div>
+            <article class="timeline__body">
+              <h3 class="timeline__role">TryHackMe</h3>
+              <p class="timeline__org">Hands-on offensive and defensive security labs</p>
+              <ul class="ticks">
+                <li>Ranked in the top 1% of users worldwide.</li>
+                <li>Completed Advent of Cyber in 2023, 2024, and 2025.</li>
+              </ul>
+              <a class="text-link" href="https://tryhackme.com/p/Marsellino" target="_blank" rel="noopener noreferrer">View TryHackMe profile<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </article>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__when">Internship</div>
+            <article class="timeline__body">
+              <h3 class="timeline__role">Cybersecurity intern</h3>
+              <p class="timeline__org">CodeAlpha</p>
+              <ul class="ticks">
+                <li>Completed the cybersecurity internship task programme.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__when">Education</div>
+            <article class="timeline__body">
+              <h3 class="timeline__role">Bachelor of Computer Science</h3>
+              <p class="timeline__org">Modern Academy for Computer Science</p>
+              <ul class="ticks">
+                <li>Graduation project: Network-X.</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ EXPERTISE ============ -->
+    <section class="section" id="expertise" aria-labelledby="expertise-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="expertise-title">Expertise</h2>
+          <p class="section__lede">Four areas I work across, from control testing to adversary emulation.</p>
+        </header>
+
+        <div class="domains">
+          <article class="domain">
+            <h3 class="domain__title">IT audit and technology risk assurance</h3>
+            <p class="domain__desc">Evaluating whether technology controls are designed and operating effectively.</p>
+            <ul class="tags">
+              <li>IT General Controls (ITGC)</li><li>Test of Design (ToD)</li><li>Test of Operating Effectiveness (ToE)</li><li>Risk and Control Matrix (RCM)</li><li>IT risk assessment</li><li>Internal control evaluation</li><li>Audit working papers</li><li>Identity and access management</li><li>Privileged access management</li><li>Segregation of duties</li><li>IT governance</li><li>IT operations</li><li>BCP and DR</li><li>Information security auditing</li>
+            </ul>
+          </article>
+          <article class="domain">
+            <h3 class="domain__title">Governance, risk and compliance</h3>
+            <p class="domain__desc">Aligning security programmes with recognised standards and regulation.</p>
+            <ul class="tags">
+              <li>ISO/IEC 27001:2022</li><li>ISO/IEC 27002</li><li>COBIT 2019</li><li>COSO</li><li>NIST Cybersecurity Framework</li><li>MITRE ATT&amp;CK</li><li>PCI DSS</li><li>Information security risk management</li><li>Security governance</li><li>Regulatory compliance</li><li>Egypt Personal Data Protection Law (No. 151 of 2020)</li><li>CBE Cybersecurity Framework</li>
+            </ul>
+          </article>
+          <article class="domain">
+            <h3 class="domain__title">Offensive security and red teaming</h3>
+            <p class="domain__desc">Finding and proving exploitable weaknesses within an authorized scope.</p>
+            <ul class="tags">
+              <li>Web application penetration testing</li><li>Network penetration testing</li><li>Vulnerability assessment</li><li>Active Directory security assessment</li><li>Privilege escalation</li><li>Red team operations</li><li>Adversary emulation</li><li>Attack surface management</li><li>OSINT</li><li>API security testing</li><li>Wireless security</li><li>Incident analysis</li>
+            </ul>
+          </article>
+          <article class="domain">
+            <h3 class="domain__title">Programming and security automation</h3>
+            <p class="domain__desc">Building tools that make assessments faster and more consistent.</p>
+            <ul class="tags">
+              <li>Python</li><li>Bash</li><li>Linux</li><li>Security tool development</li><li>Vulnerability intelligence automation</li><li>Security assessment automation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TOOLS ============ -->
+    <section class="section section--alt" id="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="tools-title">Tools arsenal</h2>
+          <p class="section__lede">The tools I use in assessments, grouped by what they're for. Each links to its official site or source repository.</p>
+        </header>
+
+        <div class="toolbar" role="search">
+          <label class="search" for="tool-search">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+            <span class="visually-hidden">Search tools</span>
+            <input id="tool-search" type="search" placeholder="Search tools, e.g. Kerberos or DNS" autocomplete="off">
+          </label>
+          <div class="filters" role="group" aria-label="Filter tools by category">
+            <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All <span class="filter__count">24</span></button>
+            <button type="button" class="filter" data-filter="network" aria-pressed="false">Network <span class="filter__count">2</span></button>
+            <button type="button" class="filter" data-filter="vuln" aria-pressed="false">Vulnerability assessment <span class="filter__count">4</span></button>
+            <button type="button" class="filter" data-filter="web" aria-pressed="false">Web and API <span class="filter__count">3</span></button>
+            <button type="button" class="filter" data-filter="ad" aria-pressed="false">Active Directory and red team <span class="filter__count">6</span></button>
+            <button type="button" class="filter" data-filter="wireless" aria-pressed="false">Wireless <span class="filter__count">1</span></button>
+            <button type="button" class="filter" data-filter="intel" aria-pressed="false">Threat intel and recon <span class="filter__count">6</span></button>
+            <button type="button" class="filter" data-filter="dev" aria-pressed="false">Automation <span class="filter__count">2</span></button>
+          </div>
+        </div>
+        <p class="tools__status" id="tool-status" role="status" aria-live="polite">Showing all 24 tools.</p>
+
+        <ul class="tools" id="tool-list">
+          <li class="tool" data-category="network">
+            <span class="tool__glyph" aria-hidden="true">Nm</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Nmap</h3>
+              <p class="tool__cat">Network</p>
+              <p class="tool__desc">Host discovery, port and service enumeration, and NSE scripting to map the attack surface.</p>
+              <a class="tool__link" href="https://nmap.org/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Nmap (opens in a new tab)</span></a>
             </div>
-        </section>
-
-        <!-- Main Content -->
-        <main class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-            
-            <!-- Why SARM Section -->
-            <section id="why-sarm" class="max-w-7xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="glass-card p-8"><div class="glass-card-inner">
-                        <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-highlight-teal/10 mb-4 border border-highlight-teal/20">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-highlight-teal"><polyline points="22 12 16 12 14 15 10 9 8 12 2 12"></polyline><path d="M5.45 5.45 2 2"></path><path d="M18.55 5.45 22 2"></path><path d="m2 22 3.45-3.45"></path><path d="m18.55 18.55 3.45 3.45"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Proprietary Tooling</h3>
-                        <p class="text-slate-400">Leveraging custom tools like VAMPIRE-X and the SARM suite provides deeper, more relevant insights than off-the-shelf scanners.</p>
-                    </div></div>
-                    <div class="glass-card p-8"><div class="glass-card-inner">
-                        <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-highlight-teal/10 mb-4 border border-highlight-teal/20">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-highlight-teal"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Business-Centric Risk</h3>
-                        <p class="text-slate-400">I translate technical findings into quantifiable business risks, enabling informed, strategic decisions at the executive level.</p>
-                    </div></div>
-                    <div class="glass-card p-8"><div class="glass-card-inner">
-                        <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-highlight-teal/10 mb-4 border border-highlight-teal/20">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-highlight-teal"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Local & Global Expertise</h3>
-                        <p class="text-slate-400">Deep knowledge of international standards (ISO 27001) and crucial local regulations like the Egyptian Data Protection Law and CBE Framework.</p>
-                    </div></div>
-                </div>
-            </section>
-            
-            <!-- Threat Intel Briefing Section -->
-            <section id="threat-intel" class="max-w-4xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="bg-red-500"></div><div class="bg-yellow-500"></div><div class="bg-green-500"></div>
-                        <p class="ml-auto text-xs text-slate-400">SARM-THREAT-INTEL: LIVE FEED</p>
-                    </div>
-                    <div>
-                        <p class="font-mono text-sm text-slate-400">&gt; Establishing secure connection...</p>
-                        <p class="font-mono text-sm text-slate-400">&gt; Connection established. Streaming intel...</p>
-                        <div id="threat-feed" class="mt-2 space-y-1 text-sm"></div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- The Strategic ROI of Cybersecurity Section -->
-            <section id="roi" class="max-w-7xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="text-center mb-12">
-                     <h2 class="section-title justify-center">The Strategic ROI of Cybersecurity</h2>
-                     <p class="section-subtitle mt-4">A robust security posture is not an expense; it's a critical investment with tangible returns.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="glass-card p-8">
-                        <div class="glass-card-inner">
-                            <h3 class="text-2xl font-bold highlight-text mb-4">Preventing Financial Catastrophe</h3>
-                            <p class="text-slate-300 mb-6">Proactive security assessments are an insurance policy against devastating, often business-ending, expenses from data breaches, including regulatory fines, legal fees, and reputational damage.</p>
-                            <div class="p-4 border-l-4 border-highlight-teal bg-slate-800/50 rounded-r-lg">
-                                 <p class="text-slate-400 text-sm">Avg. Cost of Data Breach (IBM 2023)</p>
-                                <p class="text-3xl font-bold text-white">$<span class="stat-counter" data-target="4.45">0.00</span>M</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="glass-card p-8">
-                         <div class="glass-card-inner">
-                            <h3 class="text-2xl font-bold highlight-text mb-4">Enhancing Brand & Unlocking Growth</h3>
-                            <p class="text-slate-300 mb-6">In today's market, trust is currency. A demonstrated commitment to security is a powerful differentiator that attracts high-value clients and paves the way for premium partnerships and expansion.</p>
-                             <div class="p-4 border-l-4 border-highlight-teal bg-slate-800/50 rounded-r-lg">
-                                <p class="text-slate-400 text-sm">Potential Revenue Impact</p>
-                                <p class="text-3xl font-bold text-white">+<span class="stat-counter" data-target="200">0</span>%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Detailed Services Section -->
-            <section id="services" class="max-w-7xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="text-center mb-12">
-                     <h2 class="section-title justify-center">Comprehensive Security Services</h2>
-                     <p class="section-subtitle mt-4">A multi-faceted approach to building and validating a robust security posture.</p>
-                </div>
-
-                <div class="w-full max-w-4xl mx-auto">
-                    <div class="mb-8 border-b border-slate-700 flex justify-center font-mono">
-                        <button class="tab-button active py-3 px-6 -mb-px border-b-2 border-transparent transition-colors" data-tab="1">Offensive Security</button>
-                        <button class="tab-button py-3 px-6 -mb-px border-b-2 border-transparent transition-colors text-slate-400" data-tab="2">Auditing & Compliance</button>
-                        <button class="tab-button py-3 px-6 -mb-px border-b-2 border-transparent transition-colors text-slate-400" data-tab="3">Strategic Advisory</button>
-                    </div>
-
-                    <div id="tab-panels">
-                        <div id="tab-panel-1" class="tab-panel active grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Web Application VAPT:</strong> Testing for OWASP Top 10, business logic flaws, and API vulnerabilities.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Network Penetration Testing:</strong> Internal and external assessments of network infrastructure and segmentation.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Mobile Application Security:</strong> Analysis of iOS & Android apps for client-side and server-side weaknesses.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Red Team Operations:</strong> Goal-oriented adversary simulation to test your detection and response capabilities.</div></div>
-                        </div>
-                        <div id="tab-panel-2" class="tab-panel grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>ISO 27001 Audits:</strong> Gap analysis and readiness assessments for the ISMS standard.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>CBE Framework Compliance:</strong> Ensuring financial institutions meet the strict cybersecurity requirements of the Central Bank of Egypt.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Egyptian Data Law Audits:</strong> Validating that data handling processes comply with Law No. 151 of 2020.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Risk & Control Assessments:</strong> Identifying and evaluating security risks to prioritize remediation efforts effectively.</div></div>
-                        </div>
-                        <div id="tab-panel-3" class="tab-panel grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Virtual CISO (vCISO):</strong> Providing strategic security leadership and program development on a fractional basis.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Secure Architecture Design:</strong> Consulting on building resilient, secure-by-design systems and networks.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Incident Response Planning:</strong> Developing and testing IR plans to minimize the impact of a security breach.</div></div>
-                            <div class="glass-card p-6"><div class="glass-card-inner"><strong>Security Awareness Training:</strong> Tailored training programs to strengthen your human firewall.</div></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Strategic Approach Section -->
-            <section id="approach" class="max-w-4xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="text-center mb-12">
-                     <h2 class="section-title justify-center">My Strategic Approach: From Audit to Architecture</h2>
-                     <p class="section-subtitle mt-4">A proven methodology for delivering tangible security improvements.</p>
-                </div>
-                <div class="workflow-container" style="counter-reset: step;">
-                    <div class="workflow-step">
-                        <h3 class="text-xl font-bold text-white mb-2">Phase 1: Comprehensive Audit & Risk Assessment</h3>
-                        <p class="text-slate-400">We begin by understanding your business. I conduct thorough IT audits against frameworks like ISO 27001 and COSO, identifying gaps between your current state and your compliance requirements. This phase delivers a clear roadmap prioritized by business risk.</p>
-                    </div>
-                     <div class="workflow-step">
-                        <h3 class="text-xl font-bold text-white mb-2">Phase 2: Offensive Security & Threat Simulation</h3>
-                        <p class="text-slate-400">Here, we validate the risks. Using my custom toolkit and advanced methodologies, I simulate real-world attacks through comprehensive penetration testing and vulnerability assessments. This isn't just a scan; it's a measure of your true defensive capabilities against a skilled adversary.</p>
-                    </div>
-                     <div class="workflow-step">
-                        <h3 class="text-xl font-bold text-white mb-2">Phase 3: Secure Infrastructure Design & Consultation</h3>
-                        <p class="text-slate-400">Security shouldn't be an afterthought. I help you build it in from the ground up. I provide expert consultation on designing and implementing secure network architectures, applying principles like defense-in-depth and zero-trust to create a foundation that is inherently resilient, scalable, and secure.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- The Arsenal Section -->
-            <section id="arsenal" class="max-w-7xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="text-center mb-12">
-                     <h2 class="section-title justify-center">The SARM Security Arsenal</h2>
-                     <p class="section-subtitle mt-4">Leveraging proprietary technology for a decisive intelligence advantage.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div class="terminal-window p-0 overflow-hidden">
-                        <div class="p-4"><h3 class="text-xl font-bold highlight-text mb-2">VAMPIRE-X</h3>
-                         <p class="text-slate-400 text-sm">Comprehensive vulnerability analysis and management engine.</p></div>
-                        <pre class="bg-slate-900/50 p-4 text-sm whitespace-pre-wrap"><code><span class="text-highlight-teal">$</span> sudo ./vampirex.py 10.10.1.0/24 -s vuln
-<span class="text-slate-500"># Correlates Nmap, Nuclei data</span>
-<span class="text-slate-500"># Cross-references with CISA KEV</span>
-<span class="text-slate-500"># Generates risk-prioritized plan</span></code></pre>
-                    </div>
-                     <div class="terminal-window p-0 overflow-hidden">
-                         <div class="p-4"><h3 class="text-xl font-bold highlight-text mb-2">SARM-Security</h3>
-                         <p class="text-slate-400 text-sm">Advanced reconnaissance and information gathering framework.</p></div>
-                         <pre class="bg-slate-900/50 p-4 text-sm whitespace-pre-wrap"><code><span class="text-highlight-teal">$</span> ./sarm-security -d domain.com
-<span class="text-slate-500"># Discovers subdomains & tech</span>
-<span class="text-slate-500"># Identifies data leaks</span>
-<span class="text-slate-500"># Builds attack surface map</span></code></pre>
-                    </div>
-                    <div class="terminal-window p-0 overflow-hidden">
-                        <div class="p-4"><h3 class="text-xl font-bold highlight-text mb-2">SARM-CVE-DB</h3>
-                        <p class="text-slate-400 text-sm">Real-time CVE and threat intelligence aggregation hub.</p></div>
-                        <pre class="bg-slate-900/50 p-4 text-sm whitespace-pre-wrap"><code><span class="text-highlight-teal">$</span> ./sarm-cvedb --query Log4j
-<span class="text-slate-500"># Ingests NVD and CISA feeds</span>
-<span class="text-slate-500"># Enables proactive defense</span>
-<span class="text-slate-500"># Facilitates rapid risk assessment</span></code></pre>
-                    </div>
-                </div>
-            </section>
-            
-             <!-- Compliance Section -->
-            <section id="compliance" class="max-w-7xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="text-center mb-12">
-                    <h2 class="section-title justify-center">Compliance: The Business Imperative</h2>
-                    <p class="section-subtitle mt-4">Navigating the complex landscape of local and international cybersecurity regulations.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="glass-card p-8">
-                        <div class="glass-card-inner">
-                            <h3 class="text-xl font-bold highlight-text mb-3">ISO/IEC 27001</h3>
-                            <p class="text-slate-400">The global benchmark for managing information security. Compliance demonstrates a mature, risk-based security program to partners and customers worldwide.</p>
-                        </div>
-                    </div>
-                    <div class="glass-card p-8">
-                        <div class="glass-card-inner">
-                            <h3 class="text-xl font-bold highlight-text mb-3">Egyptian Data Protection Law</h3>
-                            <p class="text-slate-400">Mandates strict controls for protecting the data of Egyptian citizens. My audits ensure you avoid severe penalties and reputational damage.</p>
-                        </div>
-                    </div>
-                    <div class="glass-card p-8 md:col-span-2 lg:col-span-1">
-                        <div class="glass-card-inner">
-                            <h3 class="text-xl font-bold highlight-text mb-3">CBE Cybersecurity Framework</h3>
-                            <p class="text-slate-400">A mandatory requirement for the Egyptian financial sector, demanding rigorous controls and regular testing, which my services are designed to address.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section id="faq" class="max-w-4xl mx-auto mb-24 md:mb-32 scroll-animate">
-                <div class="text-center mb-12">
-                     <h2 class="section-title justify-center">Frequently Asked Questions</h2>
-                </div>
-                <div class="space-y-4">
-                    <details class="faq-item glass-card p-6 cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-lg">
-                            What do I receive at the end of an engagement?
-                            <span class="plus-icon text-highlight-teal text-3xl transition-transform duration-300">+</span>
-                        </summary>
-                        <p class="text-slate-400 mt-4">You receive a detailed technical report with reproducible findings, risk scores (CVSS), and clear remediation guidance. More importantly, you get an executive summary that translates these risks into business context and a strategic debrief session to plan your path forward.</p>
-                    </details>
-                    <details class="faq-item glass-card p-6 cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-lg">
-                            How long does a typical penetration test take?
-                             <span class="plus-icon text-highlight-teal text-3xl transition-transform duration-300">+</span>
-                        </summary>
-                        <p class="text-slate-400 mt-4">Duration depends entirely on the scope. A small web application test might take one to two weeks, while a full red team operation against a large enterprise could span several weeks or months. We define the timeline clearly during the scoping phase.</p>
-                    </details>
-                    <details class="faq-item glass-card p-6 cursor-pointer">
-                        <summary class="flex justify-between items-center font-bold text-lg">
-                            Why not just use an automated scanner?
-                             <span class="plus-icon text-highlight-teal text-3xl transition-transform duration-300">+</span>
-                        </summary>
-                        <p class="text-slate-400 mt-4">Automated scanners are good for finding low-hanging fruit, but they miss complex vulnerabilities, business logic flaws, and cannot comprehend context. A manual, expert-led assessment identifies the critical, high-impact risks that automated tools simply cannot see, preventing false positives and providing true insight.</p>
-                    </details>
-                </div>
-            </section>
-
-
-            <!-- Contact Section -->
-            <section id="contact" class="max-w-7xl mx-auto scroll-animate">
-                 <div class="text-center mb-12">
-                     <h2 class="section-title justify-center">What's Next? Build Your Digital Fortress</h2>
-                     <p class="section-subtitle mt-4">Ready to transform your security from a liability into your greatest asset? Let's connect. I provide the expertise and tooling to build a truly resilient organization.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div class="glass-card p-8">
-                        <h3 class="text-2xl font-bold text-white mb-6">Send a Secure Message</h3>
-                        <form id="contact-form" action="https://formspree.io/f/xqabqrrl" method="POST" class="text-left space-y-6">
-                            <div>
-                                <label for="email" class="block text-sm font-mono text-slate-300 mb-2">Your Email:</label>
-                                <input type="email" id="email" name="email" required placeholder="you@example.com" class="w-full bg-slate-800/50 border border-slate-700 rounded-md p-3 text-white placeholder-slate-500 focus:border-highlight-teal focus:ring-1 focus:ring-highlight-teal transition-colors">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-mono text-slate-300 mb-2">Your Message:</label>
-                                <textarea id="message" name="message" required placeholder="Write your message..." rows="5" class="w-full bg-slate-800/50 border border-slate-700 rounded-md p-3 text-white placeholder-slate-500 focus:border-highlight-teal focus:ring-1 focus:ring-highlight-teal transition-colors"></textarea>
-                            </div>
-                            <div class="text-left">
-                                <button type="submit" id="submit-btn" class="inline-block font-mono bg-highlight-teal text-slate-900 font-bold py-3 px-10 rounded-lg hover:bg-teal-300 transition-all hover:scale-105 duration-300 text-lg shadow-lg shadow-highlight-teal/20">
-                                    Send Message
-                                </button>
-                            </div>
-                        </form>
-                        <div id="form-status" class="mt-4 text-center h-6"></div>
-                    </div>
-
-                    <div class="p-8">
-                         <h3 class="text-2xl font-bold text-white mb-6">Direct Channels</h3>
-                         <div class="space-y-4">
-                            <a href="https://linktr.ee/Marsellino.Nasry" target="_blank" class="flex items-center gap-4 p-4 border border-slate-800 rounded-md hover:border-highlight-teal hover:bg-highlight-teal/10 transition-all">
-                                <svg class="w-6 h-6 text-highlight-teal flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12v-2a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v2"/><path d="M12 12h-2a3 3 0 0 0-3 3v0a3 3 0 0 0 3 3h2"/><path d="M12 12H7.5a4.5 4.5 0 1 1 0-9h9a4.5 4.5 0 1 1 0 9H12Zm0 0V7.5a4.5 4.5 0 1 0-9 0v9a4.5 4.5 0 1 0 9 0V12Z"/></svg>
-                                <div><p class="font-bold text-slate-300">Find Me</p><p class="text-sm text-slate-400">linktr.ee/Marsellino.Nasry</p></div>
-                            </a>
-                             <a href="mailto:marsellino.nasry@gmail.com" class="flex items-center gap-4 p-4 border border-slate-800 rounded-md hover:border-highlight-teal hover:bg-highlight-teal/10 transition-all">
-                                <svg class="w-6 h-6 text-highlight-teal flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                <div><p class="font-bold text-slate-300">Gmail</p><p class="text-sm text-slate-400">marsellino.nasry@gmail.com</p></div>
-                            </a>
-                            <a href="https://wa.me/201019392651" target="_blank" class="flex items-center gap-4 p-4 border border-slate-800 rounded-md hover:border-highlight-teal hover:bg-highlight-teal/10 transition-all">
-                               <svg class="w-6 h-6 text-highlight-teal flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.13.42.2.55.3.13.1.23.23.3.4.13.25.13.55.08.88-.05.3-.23.58-.5.8-.28.23-.6.4-.98.5-.38.1-.83.1-1.35-.05-.5-.15-1-.4-1.5-.73s-.95-.75-1.35-1.25-1.1-1.3-1.48-1.9-.55-1.1-.5-1.5.2-1 .4-1.3.45-.6.7-.83c.25-.2.5-.3.8-.3s.58.1.8.3c.2.2.3.4.4.6s.15.4.15.6c0 .2-.05.4-.13.58s-.18.3-.3.45-.22.2-.3.25-.15.08-.13.13c.03.05.1.13.2.23.1.1.2.2.3.3.25.25.5.5.8.8.3.3.6.5.8.7s.4.3.5.35c.1.05.18.08.2.08.1 0 .18-.02.25-.05.18-.1.3-.2.4-.3.1-.1.2-.2.2-.25.04-.08.08-.13.13-.13.05-.03.1-.03.18-.03h.3c.1 0 .2 0 .25.04zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/></svg>
-                               <div><p class="font-bold text-slate-300">WhatsApp</p><p class="text-sm text-slate-400">(+20) 10 19392651</p></div>
-                           </a>
-                           <a href="https://www.linkedin.com/in/marsellino-nasry/" target="_blank" class="flex items-center gap-4 p-4 border border-slate-800 rounded-md hover:border-highlight-teal hover:bg-highlight-teal/10 transition-all">
-                                <svg class="w-6 h-6 text-highlight-teal flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                                <div><p class="font-bold text-slate-300">LinkedIn</p><p class="text-sm text-slate-400">linkedin.com/in/marsellino-nasry</p></div>
-                            </a>
-                         </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="bg-dark-navy/50 py-8 mt-16 border-t border-slate-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
-                <p class="font-mono">Designed & Built by Marsellino Nasry</p>
-                <p class="mt-2 text-sm">&copy; 2026 SARM Security. Forging Resilient Digital Fortresses.</p>
+          </li>
+          <li class="tool" data-category="network">
+            <span class="tool__glyph" aria-hidden="true">Ws</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Wireshark</h3>
+              <p class="tool__cat">Network</p>
+              <p class="tool__desc">Packet capture and protocol analysis to verify traffic flows, segmentation, and encryption in transit.</p>
+              <a class="tool__link" href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Wireshark (opens in a new tab)</span></a>
             </div>
-        </footer>
+          </li>
+          <li class="tool" data-category="vuln">
+            <span class="tool__glyph" aria-hidden="true">Ns</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Nessus</h3>
+              <p class="tool__cat">Vulnerability assessment</p>
+              <p class="tool__desc">Authenticated and unauthenticated vulnerability scanning, plus configuration compliance audits.</p>
+              <a class="tool__link" href="https://www.tenable.com/products/nessus" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Nessus (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="vuln">
+            <span class="tool__glyph" aria-hidden="true">Ov</span>
+            <div class="tool__body">
+              <h3 class="tool__name">OpenVAS</h3>
+              <p class="tool__cat">Vulnerability assessment</p>
+              <p class="tool__desc">Open-source vulnerability scanner from Greenbone for broad infrastructure coverage.</p>
+              <a class="tool__link" href="https://www.openvas.org/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for OpenVAS (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="vuln">
+            <span class="tool__glyph" aria-hidden="true">Nu</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Nuclei</h3>
+              <p class="tool__cat">Vulnerability assessment</p>
+              <p class="tool__desc">Template-based scanning for known CVEs and misconfigurations across large target lists.</p>
+              <a class="tool__link" href="https://github.com/projectdiscovery/nuclei" target="_blank" rel="noopener noreferrer">Source on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Nuclei (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="vuln">
+            <span class="tool__glyph" aria-hidden="true">Nk</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Nikto</h3>
+              <p class="tool__cat">Vulnerability assessment</p>
+              <p class="tool__desc">Web server scanning for dangerous files, outdated software, and insecure configuration.</p>
+              <a class="tool__link" href="https://github.com/sullo/nikto" target="_blank" rel="noopener noreferrer">Source on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Nikto (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="web">
+            <span class="tool__glyph" aria-hidden="true">Bp</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Burp Suite</h3>
+              <p class="tool__cat">Web and API</p>
+              <p class="tool__desc">Intercepting proxy for manual web and API testing, from access control to business logic flaws.</p>
+              <a class="tool__link" href="https://portswigger.net/burp" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Burp Suite (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="web">
+            <span class="tool__glyph" aria-hidden="true">Zp</span>
+            <div class="tool__body">
+              <h3 class="tool__name">OWASP ZAP</h3>
+              <p class="tool__cat">Web and API</p>
+              <p class="tool__desc">Open-source web application scanner and proxy for automated and manual testing.</p>
+              <a class="tool__link" href="https://www.zaproxy.org/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for ZAP (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="web">
+            <span class="tool__glyph" aria-hidden="true">Sq</span>
+            <div class="tool__body">
+              <h3 class="tool__name">sqlmap</h3>
+              <p class="tool__cat">Web and API</p>
+              <p class="tool__desc">Detection and confirmation of SQL injection within an authorized test scope.</p>
+              <a class="tool__link" href="https://sqlmap.org/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for sqlmap (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="ad">
+            <span class="tool__glyph" aria-hidden="true">Bh</span>
+            <div class="tool__body">
+              <h3 class="tool__name">BloodHound</h3>
+              <p class="tool__cat">Active Directory and red team</p>
+              <p class="tool__desc">Graph analysis of Active Directory relationships to reveal privilege escalation paths.</p>
+              <a class="tool__link" href="https://github.com/SpecterOps/BloodHound" target="_blank" rel="noopener noreferrer">Source on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for BloodHound (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="ad">
+            <span class="tool__glyph" aria-hidden="true">Sh</span>
+            <div class="tool__body">
+              <h3 class="tool__name">SharpHound</h3>
+              <p class="tool__cat">Active Directory and red team</p>
+              <p class="tool__desc">Data collector that feeds BloodHound with sessions, ACLs, and group memberships.</p>
+              <a class="tool__link" href="https://github.com/SpecterOps/SharpHound" target="_blank" rel="noopener noreferrer">Source on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for SharpHound (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="ad">
+            <span class="tool__glyph" aria-hidden="true">Mk</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Mimikatz</h3>
+              <p class="tool__cat">Active Directory and red team</p>
+              <p class="tool__desc">Demonstrates credential exposure in Windows memory, used to validate hardening and detection.</p>
+              <a class="tool__link" href="https://github.com/gentilkiwi/mimikatz" target="_blank" rel="noopener noreferrer">Source on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Mimikatz (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="ad">
+            <span class="tool__glyph" aria-hidden="true">Rb</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Rubeus</h3>
+              <p class="tool__cat">Active Directory and red team</p>
+              <p class="tool__desc">Kerberos toolkit for testing ticket-based attack paths such as Kerberoasting.</p>
+              <a class="tool__link" href="https://github.com/GhostPack/Rubeus" target="_blank" rel="noopener noreferrer">Source on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Rubeus (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="ad">
+            <span class="tool__glyph" aria-hidden="true">Ip</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Impacket</h3>
+              <p class="tool__cat">Active Directory and red team</p>
+              <p class="tool__desc">Python protocol library used to test SMB, Kerberos, and remote execution exposure.</p>
+              <a class="tool__link" href="https://github.com/fortra/impacket" target="_blank" rel="noopener noreferrer">Source on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Impacket (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="ad">
+            <span class="tool__glyph" aria-hidden="true">Ms</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Metasploit</h3>
+              <p class="tool__cat">Active Directory and red team</p>
+              <p class="tool__desc">Exploitation framework used to confirm the real impact of a vulnerability under agreed scope.</p>
+              <a class="tool__link" href="https://www.metasploit.com/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Metasploit (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="wireless">
+            <span class="tool__glyph" aria-hidden="true">Ac</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Aircrack-ng</h3>
+              <p class="tool__cat">Wireless</p>
+              <p class="tool__desc">Wi-Fi assessment suite for monitoring, capture, and testing WPA/WPA2 key strength.</p>
+              <a class="tool__link" href="https://www.aircrack-ng.org/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Aircrack-ng (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="intel">
+            <span class="tool__glyph" aria-hidden="true">Vt</span>
+            <div class="tool__body">
+              <h3 class="tool__name">VirusTotal</h3>
+              <p class="tool__cat">Threat intel and recon</p>
+              <p class="tool__desc">Multi-engine reputation checks for files, URLs, domains, and IP addresses.</p>
+              <a class="tool__link" href="https://www.virustotal.com/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for VirusTotal (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="intel">
+            <span class="tool__glyph" aria-hidden="true">Us</span>
+            <div class="tool__body">
+              <h3 class="tool__name">URLScan.io</h3>
+              <p class="tool__cat">Threat intel and recon</p>
+              <p class="tool__desc">Sandboxed page scans that show what a URL loads, contacts, and redirects to.</p>
+              <a class="tool__link" href="https://urlscan.io/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for URLScan.io (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="intel">
+            <span class="tool__glyph" aria-hidden="true">Ar</span>
+            <div class="tool__body">
+              <h3 class="tool__name">ANY.RUN</h3>
+              <p class="tool__cat">Threat intel and recon</p>
+              <p class="tool__desc">Interactive malware sandbox for observing how a suspicious sample behaves.</p>
+              <a class="tool__link" href="https://any.run/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for ANY.RUN (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="intel">
+            <span class="tool__glyph" aria-hidden="true">Dd</span>
+            <div class="tool__body">
+              <h3 class="tool__name">DNSDumpster</h3>
+              <p class="tool__cat">Threat intel and recon</p>
+              <p class="tool__desc">Passive DNS reconnaissance to map the hosts and records behind a domain.</p>
+              <a class="tool__link" href="https://dnsdumpster.com/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for DNSDumpster (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="intel">
+            <span class="tool__glyph" aria-hidden="true">Ct</span>
+            <div class="tool__body">
+              <h3 class="tool__name">crt.sh</h3>
+              <p class="tool__cat">Threat intel and recon</p>
+              <p class="tool__desc">Certificate Transparency search that reveals subdomains from issued certificates.</p>
+              <a class="tool__link" href="https://crt.sh/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for crt.sh (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="intel">
+            <span class="tool__glyph" aria-hidden="true">Hb</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Have I Been Pwned</h3>
+              <p class="tool__cat">Threat intel and recon</p>
+              <p class="tool__desc">Checks whether accounts and domains appear in known data breaches.</p>
+              <a class="tool__link" href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Have I Been Pwned (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="dev">
+            <span class="tool__glyph" aria-hidden="true">Py</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Python</h3>
+              <p class="tool__cat">Automation</p>
+              <p class="tool__desc">My main language for security tooling, automation, and correlating scan data.</p>
+              <a class="tool__link" href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Python (opens in a new tab)</span></a>
+            </div>
+          </li>
+          <li class="tool" data-category="dev">
+            <span class="tool__glyph" aria-hidden="true">Ba</span>
+            <div class="tool__body">
+              <h3 class="tool__name">Bash</h3>
+              <p class="tool__cat">Automation</p>
+              <p class="tool__desc">Shell scripting for repeatable recon, scanning workflows, and Linux administration.</p>
+              <a class="tool__link" href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer">Official site<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> for Bash (opens in a new tab)</span></a>
+            </div>
+          </li>
+        </ul>
+        <div class="tools__empty" id="tool-empty" hidden>
+          <p>No tools match that search. Clear the search or choose another category.</p>
+          <button type="button" class="btn btn--small btn--outline" id="tool-reset">Show all tools</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="projects-title">Projects</h2>
+          <p class="section__lede">Tools I've built to make audit and security work more rigorous and repeatable.</p>
+        </header>
+
+        <div class="filters filters--projects" role="group" aria-label="Filter projects">
+          <button type="button" class="filter is-active" data-project-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-project-filter="grc" aria-pressed="false">Governance and audit</button>
+          <button type="button" class="filter" data-project-filter="tooling" aria-pressed="false">Security tooling</button>
+          <button type="button" class="filter" data-project-filter="learning" aria-pressed="false">Learning and research</button>
+        </div>
+
+        <div class="projects" id="project-list">
+          <!-- Featured: ISO 27001 platform -->
+          <article class="project project--featured" data-project-category="grc tooling" aria-labelledby="p-isms">
+            <div class="project__visual">
+              <figure class="annex">
+                <div class="annex__clauses" aria-hidden="true">
+                  <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                </div>
+                <p class="annex__clauses-label">Clauses 4 to 10: management system requirements</p>
+                <div class="annex__themes">
+                <div class="annex__theme annex__theme--org"><p class="annex__label"><span>Organizational <span class="annex__ref">A.5</span></span><span class="annex__n">37</span></p><div class="annex__cells" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+                <div class="annex__theme annex__theme--people"><p class="annex__label"><span>People <span class="annex__ref">A.6</span></span><span class="annex__n">8</span></p><div class="annex__cells" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+                <div class="annex__theme annex__theme--phys"><p class="annex__label"><span>Physical <span class="annex__ref">A.7</span></span><span class="annex__n">14</span></p><div class="annex__cells" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+                <div class="annex__theme annex__theme--tech"><p class="annex__label"><span>Technological <span class="annex__ref">A.8</span></span><span class="annex__n">34</span></p><div class="annex__cells" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+                </div>
+                <figcaption class="annex__caption">ISO/IEC 27001:2022 Annex A: 93 controls in four themes, each assessed in the platform.</figcaption>
+              </figure>
+            </div>
+            <div class="project__content">
+              <h3 class="project__title" id="p-isms">ISMS Assurance Platform for ISO/IEC 27001:2022</h3>
+              <p class="project__desc">A browser-based platform that brings ISO/IEC 27001:2022 audit, risk, and compliance work into one place. I built it to support Lead Auditor activities and to help organizations implement an ISMS and prepare for certification readiness.</p>
+              <ul class="ticks ticks--two">
+                <li>Clauses 4 to 10 conformity assessment, with evidence and rationale recorded per requirement</li>
+                <li>Annex A assessment of all 93 controls, with ISO/IEC 27002:2022 attributes</li>
+                <li>Risk register with 5×5 likelihood and impact scoring, residual risk, and heat map</li>
+                <li>Statement of Applicability with justification and implementation status</li>
+                <li>Findings, nonconformities, and corrective action tracking</li>
+                <li>Readiness and maturity indicators for compliance monitoring and management review</li>
+                <li>Audit report and SoA export to PDF and Excel</li>
+                <li>Local-first: working data stays in the browser, with JSON backup and restore</li>
+              </ul>
+              <dl class="project__meta">
+                <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, Chart.js, SheetJS, jsPDF</dd></div>
+                <div><dt>Status</dt><dd>Version 2.0, open source under the MIT licence</dd></div>
+              </dl>
+              <div class="project__actions">
+                <a class="btn btn--primary" href="https://github.com/Marsellino-Nasry/iso27001v.2-platform" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>View on GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+                <a class="btn btn--ghost" href="https://marsellino-nasry.github.io/iso27001v.2-platform/" target="_blank" rel="noopener noreferrer">Open the live platform<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+              </div>
+              <p class="project__fine">Version 1 is still available as <a href="https://github.com/Marsellino-Nasry/iso27001-platform" target="_blank" rel="noopener noreferrer">ISO 27001 Ultimate Platform<span class="visually-hidden"> (opens in a new tab)</span></a>. Not affiliated with or endorsed by ISO or IEC; a support tool, not a certification engine.</p>
+            </div>
+          </article>
+
+          <!-- SARM Security Arsenal -->
+          <article class="project project--arsenal" data-project-category="tooling" aria-labelledby="p-arsenal">
+            <div class="project__head">
+              <div>
+                <h3 class="project__title" id="p-arsenal">SARM Security Arsenal</h3>
+                <p class="project__desc">My in-house toolkit for the reconnaissance, vulnerability analysis, and threat intelligence stages of an assessment. Used only against systems I'm authorized to test.</p>
+              </div>
+              <dl class="project__meta project__meta--side">
+                <div><dt>Built with</dt><dd>Python, Bash, Nmap and Nuclei output, NVD and CISA KEV data</dd></div>
+                <div><dt>Status</dt><dd>Private toolkit; source not publicly released</dd></div>
+              </dl>
+            </div>
+            <ol class="arsenal">
+              <li class="arsenal__item">
+                <h4>VAMPIRE-X</h4>
+                <p class="arsenal__role">Vulnerability analysis and management</p>
+                <p>Correlates Nmap and Nuclei results, cross-references the CISA Known Exploited Vulnerabilities catalog, and produces a remediation plan ranked by risk.</p>
+                <pre class="cli"><code><span class="cli__prompt" aria-hidden="true">$ </span>./vampirex.py 10.10.1.0/24 -s vuln</code></pre>
+              </li>
+              <li class="arsenal__item">
+                <h4>SARM-Security</h4>
+                <p class="arsenal__role">Reconnaissance and attack surface mapping</p>
+                <p>Discovers subdomains and technologies, flags exposed data, and builds a map of the external attack surface.</p>
+                <pre class="cli"><code><span class="cli__prompt" aria-hidden="true">$ </span>./sarm-security -d example.com</code></pre>
+              </li>
+              <li class="arsenal__item">
+                <h4>SARM-CVE-DB</h4>
+                <p class="arsenal__role">CVE and threat intelligence</p>
+                <p>Aggregates NVD and CISA feeds into one searchable hub for fast lookups and quicker risk assessment.</p>
+                <pre class="cli"><code><span class="cli__prompt" aria-hidden="true">$ </span>./sarm-cvedb --query Log4j</code></pre>
+              </li>
+            </ol>
+            <a class="text-link" href="#contact">Ask for a walkthrough of the toolkit</a>
+          </article>
+
+          <!-- Smaller projects -->
+          <div class="project-list" data-project-category="learning tooling">
+            <h3 class="project-list__title">More projects</h3>
+            <ul class="project-list__items">
+              <li class="mini" data-project-category="learning tooling">
+                <div>
+                  <h4 class="mini__title">Chrome Password Extractor</h4>
+                  <p class="mini__desc">An educational proof of concept showing how passwords saved in a browser can be exposed once an endpoint is compromised. It supports awareness work and authorized testing, and makes the case for endpoint hardening and an enterprise password manager.</p>
+                </div>
+                <p class="mini__status">Educational, authorized use only</p>
+              </li>
+              <li class="mini" data-project-category="learning">
+                <div>
+                  <h4 class="mini__title">CodeAlpha internship tasks</h4>
+                  <p class="mini__desc">Cybersecurity tasks completed during my internship with CodeAlpha.</p>
+                </div>
+                <p class="mini__status">Completed</p>
+              </li>
+              <li class="mini" data-project-category="learning">
+                <div>
+                  <h4 class="mini__title">Network-X</h4>
+                  <p class="mini__desc">My graduation project for the Bachelor of Computer Science at Modern Academy.</p>
+                </div>
+                <p class="mini__status">Completed, academic</p>
+              </li>
+            </ul>
+            <a class="text-link" href="https://github.com/Marsellino-Nasry" target="_blank" rel="noopener noreferrer">See all repositories on GitHub<svg class="icon icon--inline" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+        <p class="projects__empty" id="project-empty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ============ CREDENTIALS ============ -->
+    <section class="section section--alt" id="credentials" aria-labelledby="credentials-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="credentials-title">Certifications and education</h2>
+          <p class="section__lede">Grouped by type, so it's clear which are certifications and which are diplomas, training programmes, or course certificates.</p>
+        </header>
+
+        <div class="creds">
+          <section class="creds__group" aria-labelledby="cg-cert">
+            <h3 class="creds__title" id="cg-cert">Certifications</h3>
+            <ul class="creds__list">
+              <li><span class="creds__name">ISO/IEC 27001 Lead Auditor</span><span class="creds__issuer">Mastermind Assurance</span><span class="domain-tag domain-tag--grc">Governance</span></li>
+              <li><span class="creds__name">ISO/IEC 27001 Information Security Associate</span><span class="creds__issuer">SkillFront</span><span class="domain-tag domain-tag--grc">Governance</span></li>
+              <li><span class="creds__name">Certified in Cybersecurity (CC)</span><span class="creds__issuer">ISC²</span><span class="domain-tag domain-tag--cyber">Cybersecurity</span></li>
+              <li><span class="creds__name">Fortinet Certified Associate in Cybersecurity</span><span class="creds__issuer">Fortinet</span><span class="domain-tag domain-tag--cyber">Cybersecurity</span></li>
+              <li><span class="creds__name">CAISR, Certified AI Security and Risk</span><span class="creds__issuer">Red Team Leaders</span><span class="domain-tag domain-tag--cyber">AI security</span></li>
+            </ul>
+          </section>
+
+          <section class="creds__group" aria-labelledby="cg-train">
+            <h3 class="creds__title" id="cg-train">Diplomas and training</h3>
+            <ul class="creds__list">
+              <li><span class="creds__name">CISSP Diploma</span><span class="creds__issuer">Diploma, 2019</span><span class="domain-tag domain-tag--cyber">Cybersecurity</span></li>
+              <li><span class="creds__name">PenTest+</span><span class="creds__issuer">Training, Arab Security</span><span class="domain-tag domain-tag--off">Offensive</span></li>
+              <li><span class="creds__name">eJPT</span><span class="creds__issuer">Training, Netriders Academy</span><span class="domain-tag domain-tag--off">Offensive</span></li>
+              <li><span class="creds__name">Security+</span><span class="creds__issuer">Training</span><span class="domain-tag domain-tag--cyber">Cybersecurity</span></li>
+              <li><span class="creds__name">CCNA</span><span class="creds__issuer">Training</span><span class="domain-tag domain-tag--cyber">Networking</span></li>
+              <li><span class="creds__name">CCNP Security</span><span class="creds__issuer">Training</span><span class="domain-tag domain-tag--cyber">Networking</span></li>
+            </ul>
+          </section>
+
+          <div class="creds__stack">
+            <section class="creds__group" aria-labelledby="cg-course">
+              <h3 class="creds__title" id="cg-course">Course certificates</h3>
+              <ul class="creds__list">
+                <li><span class="creds__name">Google Cybersecurity Professional Certificate</span><span class="creds__issuer">Google</span><span class="domain-tag domain-tag--cyber">Cybersecurity</span></li>
+                <li><span class="creds__name">API Penetration Testing</span><span class="creds__issuer">APIsec University</span><span class="domain-tag domain-tag--off">Offensive</span></li>
+                <li><span class="creds__name">Wireless Network Penetration Testing</span><span class="creds__issuer">MaharaTech</span><span class="domain-tag domain-tag--off">Offensive</span></li>
+              </ul>
+            </section>
+            <section class="creds__group" aria-labelledby="cg-comp">
+              <h3 class="creds__title" id="cg-comp">Events</h3>
+              <ul class="creds__list">
+                <li><span class="creds__name">Advent of Cyber</span><span class="creds__issuer">TryHackMe, 2023, 2024 and 2025</span></li>
+              </ul>
+            </section>
+            <section class="creds__group" aria-labelledby="cg-edu">
+              <h3 class="creds__title" id="cg-edu">Education</h3>
+              <ul class="creds__list">
+                <li><span class="creds__name">Bachelor of Computer Science</span><span class="creds__issuer">Modern Academy for Computer Science</span></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="section" id="achievements" aria-labelledby="achievements-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="achievements-title">Achievements</h2>
+          <p class="section__lede">Results I can point to, on both sides of the work.</p>
+        </header>
+
+        <ul class="ledger">
+          <li class="ledger__row">
+            <p class="ledger__figure">Top 1%</p>
+            <p class="ledger__text">Ranked among the top 1% of TryHackMe users worldwide.</p>
+          </li>
+          <li class="ledger__row">
+            <p class="ledger__figure">30+</p>
+            <p class="ledger__text">ITGC, information security, and cybersecurity audits delivered at BDO.</p>
+          </li>
+          <li class="ledger__row">
+            <p class="ledger__figure">5+ yrs</p>
+            <p class="ledger__text">Experience across banking, petroleum, and corporate sectors.</p>
+          </li>
+          <li class="ledger__row">
+            <p class="ledger__figure">93</p>
+            <p class="ledger__text">Annex A controls covered by the ISMS Assurance Platform I designed and built.</p>
+          </li>
+          <li class="ledger__row">
+            <p class="ledger__figure">3 tools</p>
+            <p class="ledger__text">Built in-house for the SARM Security Arsenal: VAMPIRE-X, SARM-Security, and SARM-CVE-DB.</p>
+          </li>
+          <li class="ledger__row">
+            <p class="ledger__figure">3 years</p>
+            <p class="ledger__text">Of TryHackMe Advent of Cyber completed, 2023 to 2025.</p>
+          </li>
+          <li class="ledger__row ledger__row--wide">
+            <p class="ledger__figure ledger__figure--word">Bug bounty</p>
+            <p class="ledger__text">Responsible vulnerability research and disclosure through bug bounty programmes.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__intro">
+          <h2 class="section__title" id="contact-title">Let's talk</h2>
+          <p class="section__lede">For roles, audit and security engagements, or a conversation about offensive security and assurance. Messages from this form come straight to my inbox.</p>
+
+          <ul class="channels">
+            <li><a href="mailto:marsellino.nasry@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span><span class="channels__name">Email</span><span class="channels__value">marsellino.nasry@gmail.com</span></span></a></li>
+            <li><a href="https://www.linkedin.com/in/marsellino-nasry/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg><span><span class="channels__name">LinkedIn</span><span class="channels__value">in/marsellino-nasry</span></span><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/Marsellino-Nasry" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><span><span class="channels__name">GitHub</span><span class="channels__value">Marsellino-Nasry</span></span><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://tryhackme.com/p/Marsellino" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><span><span class="channels__name">TryHackMe</span><span class="channels__value">Marsellino</span></span><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://wa.me/201019392651" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span><span class="channels__name">WhatsApp</span><span class="channels__value">+20 10 1939 2651</span></span><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://linktr.ee/Marsellino.Nasry" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg><span><span class="channels__name">All links</span><span class="channels__value">linktr.ee/Marsellino.Nasry</span></span><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrap">
+          <h3 class="contact__form-title">Send a message</h3>
+          <!-- Formspree endpoint unchanged: submissions are delivered to the configured Gmail inbox -->
+          <form class="form" id="contact-form" action="https://formspree.io/f/xqabqrrl" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New message from your SARM Security portfolio">
+            <div class="form__hp" aria-hidden="true">
+              <label for="hp-field">Leave this field empty</label>
+              <input type="text" id="hp-field" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form__field">
+              <label for="name">Name <span class="form__optional">(optional)</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" maxlength="120">
+            </div>
+            <div class="form__field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" maxlength="200" aria-describedby="email-error">
+              <p class="form__error" id="email-error" hidden>Enter an email address so I can reply, for example name@company.com.</p>
+            </div>
+            <div class="form__field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required rows="6" maxlength="5000" aria-describedby="message-error"></textarea>
+              <p class="form__error" id="message-error" hidden>Write a short message before sending.</p>
+            </div>
+            <div class="form__footer">
+              <button type="submit" class="btn btn--primary" id="submit-btn">Send message</button>
+              <p class="form__privacy"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-lock"/></svg>Sent over HTTPS via Formspree. Your details are used only to reply to you.</p>
+            </div>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="assets/images/sarm-logo.svg" width="236" height="68" alt="SARM Security" loading="lazy" decoding="async">
+        <p>Offensive security insight with audit discipline. The personal portfolio and research brand of Marsellino Nasry Mounir.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/marsellino-nasry/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a href="https://github.com/Marsellino-Nasry" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a href="https://tryhackme.com/p/Marsellino" target="_blank" rel="noopener noreferrer">TryHackMe<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a href="https://linktr.ee/Marsellino.Nasry" target="_blank" rel="noopener noreferrer">Linktree<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        </ul>
+      </nav>
     </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // SARM Elite 3D Interactive Background - Coded by Marsellino
-            let scene, camera, renderer, particles;
-            const canvas = document.getElementById('interactive-bg');
-
-            function init3D() {
-                scene = new THREE.Scene();
-                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                camera.position.z = 50;
-
-                renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
-                renderer.setSize(window.innerWidth, window.innerHeight);
-
-                const particleCount = 2000;
-                const positions = new Float32Array(particleCount * 3);
-                
-                for (let i = 0; i < particleCount * 3; i++) {
-                    positions[i] = (Math.random() - 0.5) * 100;
-                }
-
-                const geometry = new THREE.BufferGeometry();
-                geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-                const material = new THREE.PointsMaterial({
-                    color: 0x64ffda,
-                    size: 0.15,
-                    transparent: true,
-                    opacity: 0.7,
-                    blending: THREE.AdditiveBlending
-                });
-
-                particles = new THREE.Points(geometry, material);
-                scene.add(particles);
-            }
-
-            let mouseX = 0, mouseY = 0;
-            document.addEventListener('mousemove', (event) => {
-                mouseX = (event.clientX - window.innerWidth / 2) / 100;
-                mouseY = (event.clientY - window.innerHeight / 2) / 100;
-            });
-            
-            function animate3D() {
-                requestAnimationFrame(animate3D);
-                particles.rotation.x += 0.0002;
-                particles.rotation.y += 0.0005;
-                camera.position.x += (mouseX - camera.position.x) * 0.05;
-                camera.position.y += (-mouseY - camera.position.y) * 0.05;
-                camera.lookAt(scene.position);
-                renderer.render(scene, camera);
-            }
-
-            init3D();
-            animate3D();
-
-            window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            });
-            
-            // Interactive 3D Card Tilt Effect
-            const cards = document.querySelectorAll('.glass-card');
-            cards.forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    const rotateX = -y / 20; 
-                    const rotateY = x / 20;
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-                });
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-                });
-            });
-
-            // Scroll Animation Observer
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        const counters = entry.target.querySelectorAll('.stat-counter');
-                        counters.forEach(counter => {
-                            const target = +counter.dataset.target;
-                            let start = 0;
-                            const duration = 1500;
-                            const increment = target / (duration / 16); 
-
-                            const updateCounter = () => {
-                                start += increment;
-                                if (start < target) {
-                                    counter.textContent = start.toFixed(2).replace(/\.00$/, '');
-                                    requestAnimationFrame(updateCounter);
-                                } else {
-                                    counter.textContent = target.toString().replace(/\.00$/, '');
-                                }
-                            };
-                            updateCounter();
-                            counter.classList.remove('stat-counter');
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-            document.querySelectorAll('.scroll-animate').forEach(el => { observer.observe(el); });
-
-            // Navbar scroll effect
-            const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('bg-dark-navy/80', 'backdrop-blur-sm', 'shadow-lg', 'shadow-black/20');
-                } else {
-                    navbar.classList.remove('bg-dark-navy/80', 'backdrop-blur-sm', 'shadow-lg', 'shadow-black/20');
-                }
-            });
-            
-            // Mobile menu toggle
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            
-            const toggleMenu = () => {
-                mobileMenu.classList.toggle('hidden');
-                document.body.classList.toggle('overflow-hidden');
-            };
-            
-            menuBtn.addEventListener('click', toggleMenu);
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
-
-            // Services Tabs Logic
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabPanels = document.querySelectorAll('.tab-panel');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const targetTab = button.dataset.tab;
-                    tabButtons.forEach(btn => btn.classList.remove('active', 'text-highlight-teal'));
-                    button.classList.add('active', 'text-highlight-teal');
-                    tabPanels.forEach(panel => {
-                        panel.classList.toggle('active', panel.id === `tab-panel-${targetTab}`);
-                    });
-                });
-            });
-            
-            // Hero Title Decoding Effect
-            const heroTitle = document.getElementById('hero-title');
-            const finalTitle = "Offensive Security & Strategic Risk Advisory.";
-            const chars = '!<>-_\\/[]{}—=+*^?#________';
-            
-            const decodeEffect = () => {
-                let iteration = 0;
-                const interval = setInterval(() => {
-                    heroTitle.innerText = finalTitle.split("").map((letter, index) => {
-                        if(index < iteration) return finalTitle[index];
-                        return chars[Math.floor(Math.random() * chars.length)];
-                    }).join("");
-                    
-                    if(iteration >= finalTitle.length) clearInterval(interval);
-                    iteration += 1 / 2;
-                }, 40);
-            };
-            decodeEffect();
-            
-            // Threat Intel Feed
-            const threatFeed = document.getElementById('threat-feed');
-            const threats = [
-                "[HIGH] New RCE vulnerability detected: CVE-2026-XXXX in popular web framework. Patch immediately.",
-                "[MED] Phishing campaign impersonating Office 365 login discovered targeting financial sector.",
-                "[INFO] SARM-CVE-DB updated with 5 new critical vulnerabilities from CISA KEV catalog.",
-                "[LOW] Port scan detected from known malicious IP range. Blocked by firewall rules.",
-                "[HIGH] Active exploitation of legacy VPN service confirmed. Threat actor group: APT-SARM. Isolate and investigate."
-            ];
-            let threatIndex = 0;
-            const typeThreat = () => {
-                if (!threatFeed || threatIndex >= threats.length) return;
-                const p = document.createElement('p');
-                const threat = threats[threatIndex];
-                let colorClass = 'text-slate-400';
-                if (threat.startsWith('[HIGH]')) colorClass = 'text-red-500';
-                if (threat.startsWith('[MED]')) colorClass = 'text-yellow-400';
-                p.className = `font-mono ${colorClass}`;
-                
-                const prevCursor = threatFeed.querySelector('.blinking-cursor');
-                if (prevCursor) prevCursor.remove();
-                
-                threatFeed.appendChild(p);
-                
-                let charIndex = 0;
-                const typingInterval = setInterval(() => {
-                    p.innerHTML = `&gt; ${threat.substring(0, charIndex)}<span class="blinking-cursor">_</span>`;
-                    charIndex++;
-                    if(charIndex > threat.length) {
-                        clearInterval(typingInterval);
-                        p.innerHTML = `&gt; ${threat}`;
-                        threatIndex++;
-                        setTimeout(typeThreat, 3000);
-                    }
-                }, 20);
-            };
-            setTimeout(typeThreat, 1000);
-
-            // AJAX Contact Form
-            const form = document.getElementById('contact-form');
-            const submitBtn = document.getElementById('submit-btn');
-            const formStatus = document.getElementById('form-status');
-
-            async function handleSubmit(event) {
-                event.preventDefault();
-                const data = new FormData(event.target);
-                
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = `
-                    <svg class="animate-spin h-5 w-5 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>`;
-                formStatus.textContent = '';
-
-                fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                }).then(response => {
-                    if (response.ok) {
-                        formStatus.textContent = "Thank you! Your message has been sent.";
-                        formStatus.className = "mt-4 text-center h-6 text-highlight-teal";
-                        form.reset();
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
-                            } else {
-                                formStatus.textContent = "Form submission failed. Please try again.";
-                            }
-                             formStatus.className = "mt-4 text-center h-6 text-red-500";
-                        })
-                    }
-                }).catch(error => {
-                    formStatus.textContent = "Form submission failed. Please use a direct channel.";
-                    formStatus.className = "mt-4 text-center h-6 text-red-500";
-                }).finally(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = 'Send Message';
-                });
-            }
-            form.addEventListener("submit", handleSubmit);
-        });
-    </script>
+    <div class="container site-footer__base">
+      <p>&copy; <span id="year">2026</span> SARM Security. Designed and built by Marsellino Nasry Mounir.</p>
+      <a class="to-top" href="#top"><svg class="icon icon--inline" aria-hidden="true"><use href="#i-up"/></svg>Back to top</a>
+    </div>
+  </footer>
 </body>
 </html>
-
