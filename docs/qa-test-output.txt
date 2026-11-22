@@ -1,0 +1,106 @@
+PASS /: no console errors
+PASS /: no failed local requests
+PASS /: all images load
+PASS /: title, description, one h1, lang, alt attributes  [{"title": "Marsellino Nasry Mounir | Senior IT Auditor, Technology Risk & Offensive Security", "desc": "Marsellino Nasry Mounir is a Senior IT Auditor at BDO Eg]
+PASS /: canonical and og:image
+PASS /: no horizontal overflow at 1440  [0]
+PASS /: axe-core WCAG 2.2 AA + best practice
+PASS /projects/isms-assurance-platform.html: no console errors
+PASS /projects/isms-assurance-platform.html: no failed local requests
+PASS /projects/isms-assurance-platform.html: all images load
+PASS /projects/isms-assurance-platform.html: title, description, one h1, lang, alt attributes  [{"title": "ISMS Assurance Platform for ISO/IEC 27001:2022 | Case study | Marsellino Nasry Mounir", "desc": "Case study: a local-first, open-source platform for ]
+PASS /projects/isms-assurance-platform.html: canonical and og:image
+PASS /projects/isms-assurance-platform.html: no horizontal overflow at 1440  [0]
+PASS /projects/isms-assurance-platform.html: axe-core WCAG 2.2 AA + best practice
+PASS /projects/sarm-security-arsenal.html: no console errors
+PASS /projects/sarm-security-arsenal.html: no failed local requests
+PASS /projects/sarm-security-arsenal.html: all images load
+PASS /projects/sarm-security-arsenal.html: title, description, one h1, lang, alt attributes  [{"title": "SARM Security Arsenal: VAMPIRE-X, SARM-Security, SARM-CVE-DB | Case study | Marsellino Nasry Mounir", "desc": "Case study: SARM Security Arsenal, a p]
+PASS /projects/sarm-security-arsenal.html: canonical and og:image
+PASS /projects/sarm-security-arsenal.html: no horizontal overflow at 1440  [0]
+PASS /projects/sarm-security-arsenal.html: axe-core WCAG 2.2 AA + best practice
+PASS /projects/network-x.html: no console errors
+PASS /projects/network-x.html: no failed local requests
+PASS /projects/network-x.html: all images load
+PASS /projects/network-x.html: title, description, one h1, lang, alt attributes  [{"title": "Network-X: authorised penetration test (graduation project, A+) | Case study | Marsellino Nasry Mounir", "desc": "Case study: Network-X, an authorise]
+PASS /projects/network-x.html: canonical and og:image
+PASS /projects/network-x.html: no horizontal overflow at 1440  [0]
+PASS /projects/network-x.html: axe-core WCAG 2.2 AA + best practice
+PASS /projects/chrome-password-extractor.html: no console errors
+PASS /projects/chrome-password-extractor.html: no failed local requests
+PASS /projects/chrome-password-extractor.html: all images load
+PASS /projects/chrome-password-extractor.html: title, description, one h1, lang, alt attributes  [{"title": "Browser credential exposure: an educational proof of concept | Case study | Marsellino Nasry Mounir", "desc": "Case study: an educational proof of co]
+PASS /projects/chrome-password-extractor.html: canonical and og:image
+PASS /projects/chrome-password-extractor.html: no horizontal overflow at 1440  [0]
+PASS /projects/chrome-password-extractor.html: axe-core WCAG 2.2 AA + best practice
+PASS /cv.html: no console errors
+PASS /cv.html: no failed local requests
+PASS /cv.html: all images load
+PASS /cv.html: title, description, one h1, lang, alt attributes  [{"title": "CV: Marsellino Nasry Mounir, Senior IT Auditor | Printable professional profile", "desc": "Printable CV of Marsellino Nasry Mounir, Senior IT Auditor]
+PASS /cv.html: canonical and og:image
+PASS /cv.html: no horizontal overflow at 1440  [0]
+PASS /cv.html: axe-core WCAG 2.2 AA + best practice
+PASS /capability-statement.html: no console errors
+PASS /capability-statement.html: no failed local requests
+PASS /capability-statement.html: all images load
+PASS /capability-statement.html: title, description, one h1, lang, alt attributes  [{"title": "Capability statement: Marsellino Nasry Mounir | Technology risk and cybersecurity", "desc": "One-page capability statement: technology risk assurance]
+PASS /capability-statement.html: canonical and og:image
+PASS /capability-statement.html: no horizontal overflow at 1440  [0]
+PASS /capability-statement.html: axe-core WCAG 2.2 AA + best practice
+PASS /404.html: no console errors
+PASS /404.html: no failed local requests
+PASS /404.html: all images load
+PASS /404.html: title, description, one h1, lang, alt attributes  [{"title": "Page not found | Marsellino Nasry Mounir", "desc": "This page doesn't exist. Find projects, experience and contact details on the home page.", "canon]
+PASS /404.html: no horizontal overflow at 1440  [0]
+PASS /404.html: axe-core WCAG 2.2 AA + best practice
+PASS internal links resolve (83 unique)
+external links (verify manually or with a link checker):
+PASS CV PDF downloadable  [200 application/pdf]
+PASS Capability statement PDF downloadable  [200 application/pdf]
+PASS tool search 'kerberos' finds Rubeus and Impacket  [2; Showing 2 of 29 tools matching "kerberos".]
+PASS tool search empty state shown
+PASS tool reset restores all 29
+PASS tool category filter (wireless = 1)
+PASS chip aria-pressed updates
+PASS project filter (GRC = 1)
+PASS credential filter (certifications = 6)
+PASS credential filter (training = 11)
+PASS timeline filter (professional = 1)
+PASS Dual-Lens explorer has 5 tabs
+PASS Dual-Lens tab click shows panel 3 only
+PASS Dual-Lens arrow key moves to panel 4
+PASS Audit methodology tab 4 (ToE) shows
+PASS timeline entry expands
+PASS back-to-top button appears after scrolling
+PASS back-to-top returns to top
+PASS form: empty submit shows errors and focuses first field  [f-name]
+PASS form: no request sent when invalid
+PASS form: invalid email rejected
+PASS form: valid submit posts to Formspree and shows success  [Message sent. I'll reply to qa@example.com as soon as I can.]
+PASS form: subject and fields included
+PASS form: reset after success
+PASS form: cooldown blocks a second send within 60s  [You sent a message less than a minute ago. Wait 60 seconds before sending another.]
+PASS form: server error shown with mailto fallback  [Email is invalid Try again, or email me directly.]
+PASS form: network failure handled  [The connection failed. Your message wasn't sent. Check your connection and try again, or email me directly.]
+PASS form: honeypot-filled submission is not sent
+PASS /: no horizontal overflow at 1024px  [0]
+PASS /projects/isms-assurance-platform.html: no horizontal overflow at 1024px  [0]
+PASS /cv.html: no horizontal overflow at 1024px  [0]
+PASS /: no horizontal overflow at 768px  [0]
+PASS /projects/isms-assurance-platform.html: no horizontal overflow at 768px  [0]
+PASS /cv.html: no horizontal overflow at 768px  [0]
+PASS /: no horizontal overflow at 390px  [0]
+PASS /projects/isms-assurance-platform.html: no horizontal overflow at 390px  [0]
+PASS /cv.html: no horizontal overflow at 390px  [0]
+PASS mobile menu opens
+PASS mobile menu focuses first link
+PASS Escape closes menu and returns focus
+PASS menu link navigates and closes menu
+PASS first Tab focuses skip link
+PASS no-JS: all 5 Dual-Lens scenarios visible
+PASS no-JS: filter chips hidden (no dead controls)
+PASS no-JS: all 29 tools listed
+PASS no-JS: contact form posts to Formspree
+PASS reduced motion disables the portrait animation  [1e-05s]
+
+103 passed, 0 failed
