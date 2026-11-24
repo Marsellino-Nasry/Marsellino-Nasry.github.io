@@ -86,7 +86,3 @@ I'm open to conversations about technology risk, cybersecurity assurance and off
 - 🌐 **Website:** [marsellino-nasry.github.io](https://marsellino-nasry.github.io/)
 - 💼 **LinkedIn:** [in/marsellino-nasry](https://www.linkedin.com/in/marsellino-nasry/)
 - ✉️ **Email:** marsellino.nasry@gmail.com
-
----
-
-<sub>Views and projects here are my own and do not represent BDO Khaled & Co. Client names, audit evidence and findings are never published. All security testing is performed only with authorisation.</sub>
