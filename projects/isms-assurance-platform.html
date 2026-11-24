@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISO/IEC 27001:2022 ISMS Assurance Platform | Case study | Marsellino Nasry Mounir</title>
+  <meta name="description" content="Case study: an open-source, local-first ISO/IEC 27001:2022 audit and compliance platform covering Clauses 4 to 10, all 93 Annex A controls, the Statement of Applicability, risk register, findings and evidence.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://marsellino-nasry.github.io/projects/isms-assurance-platform.html">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action https://formspree.io; manifest-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="author" content="Marsellino Nasry Mounir">
+  <meta name="theme-color" content="#05090F">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Marsellino Nasry Mounir">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://marsellino-nasry.github.io/projects/isms-assurance-platform.html">
+  <meta property="og:title" content="ISMS Assurance Platform | Case study">
+  <meta property="og:description" content="An enterprise compliance and assurance platform for ISO/IEC 27001:2022, built from an IT audit perspective.">
+  <meta property="og:image" content="https://marsellino-nasry.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Marsellino Nasry Mounir, Senior IT Auditor: bridging enterprise technology risk assurance with hands-on offensive security">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ISMS Assurance Platform | Case study">
+  <meta name="twitter:description" content="An enterprise compliance and assurance platform for ISO/IEC 27001:2022, built from an IT audit perspective.">
+  <meta name="twitter:image" content="https://marsellino-nasry.github.io/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Marsellino Nasry Mounir, Senior IT Auditor">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261123">
+  <script src="../assets/js/main.js?v=20261123" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://marsellino-nasry.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://marsellino-nasry.github.io/#projects"}, {"@type": "ListItem", "position": 3, "name": "ISMS Assurance Platform"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ISMS Assurance Platform", "applicationCategory": "BusinessApplication", "operatingSystem": "Any modern web browser", "url": "https://marsellino-nasry.github.io/iso27001v.2-platform/", "license": "https://opensource.org/licenses/MIT", "author": {"@id": "https://marsellino-nasry.github.io/#person"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="../#home" aria-label="Marsellino Nasry Mounir, home">
+        <img class="brand__mark" src="../assets/img/sarm-mark.svg" width="20" height="34" alt="">
+        <span class="brand__text">
+          <span class="brand__name">Marsellino Nasry</span>
+          <span class="brand__role">Senior IT Auditor · Offensive Security</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a href="../#about" data-nav="about">Profile</a></li><li><a href="../#method" data-nav="method">Method</a></li><li><a href="../#experience" data-nav="experience">Experience</a></li><li><a href="../#assurance" data-nav="assurance">Assurance</a></li><li><a href="../#offensive" data-nav="offensive">Offensive</a></li><li><a href="../#projects" data-nav="projects" aria-current="page">Projects</a></li><li><a href="../#credentials" data-nav="credentials">Credentials</a></li><li><a href="../#contact" data-nav="contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--small btn--primary site-nav__cv" href="../cv.html"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-file"/></svg>CV<span class="visually-hidden">: view or download</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"/></svg>
+          <span class="nav-toggle__label">Menu</span>
+        </button>
+      </nav>
+    </div>
+    <div class="menu" id="site-menu" hidden>
+      <div class="container menu__inner">
+        <p class="menu__title" id="menu-title">All sections</p>
+        <ol class="menu__list" aria-labelledby="menu-title">
+          <li><a href="../#home"><span class="menu__n">01</span>Home</a></li><li><a href="../#about"><span class="menu__n">02</span>Profile and positioning</a></li><li><a href="../#method"><span class="menu__n">03</span>The Dual-Lens method</a></li><li><a href="../#experience"><span class="menu__n">04</span>Career timeline</a></li><li><a href="../#assurance"><span class="menu__n">05</span>IT audit and technology risk</a></li><li><a href="../#offensive"><span class="menu__n">06</span>Offensive security</a></li><li><a href="../#environment"><span class="menu__n">07</span>Technology environment</a></li><li><a href="../#frameworks"><span class="menu__n">08</span>Framework ecosystem</a></li><li><a href="../#projects"><span class="menu__n">09</span>Projects and engineering</a></li><li><a href="../#arsenal"><span class="menu__n">10</span>Skills and technical arsenal</a></li><li><a href="../#credentials"><span class="menu__n">11</span>Certifications and education</a></li><li><a href="../#research"><span class="menu__n">12</span>Research and publications</a></li><li><a href="../#contact"><span class="menu__n">13</span>Contact</a></li>
+        </ol>
+        <div class="menu__docs">
+          <a class="btn btn--primary" href="../assets/docs/Marsellino_Nasry_CV.pdf" download="Marsellino_Nasry_CV.pdf" type="application/pdf"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-download"/></svg>Download CV (PDF)</a>
+          <a class="btn btn--ghost" href="../cv.html"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"/></svg>View CV online</a>
+          <a class="btn btn--ghost" href="../capability-statement.html">Capability statement</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+<section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero__grid">
+          <div>
+            <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="../">Home</a></li><li><a href="../#projects">Projects</a></li><li aria-current="page">ISMS Assurance Platform</li></ol></nav>
+            <div class="page-hero__top"><span class="page-hero__cat">Enterprise compliance and assurance</span><span class="badge badge--live">Live, open source</span><span class="page-hero__period">Sep 2025 to present</span></div>
+            <h1 class="page-title" id="page-title">ISO/IEC 27001:2022 ISMS Assurance Platform</h1>
+            <p class="page-summary">A browser-based platform for ISO/IEC 27001:2022 audit, risk and compliance work, designed from an IT audit and cybersecurity perspective to support Lead Auditors and organisations preparing for certification.</p>
+            <div class="page-actions">
+              <a class="btn btn--primary" href="https://marsellino-nasry.github.io/iso27001v.2-platform/" target="_blank" rel="noopener noreferrer">Open the live platform<svg class="icon icon--sm" aria-hidden="true"><use href="../assets/img/icons.svg#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <a class="btn btn--ghost" href="https://github.com/Marsellino-Nasry/iso27001v.2-platform" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-code"/></svg>Source on GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+          <figure class="page-hero__cover panel panel--console">
+<svg class="cover" viewBox="0 0 600 340" role="img" aria-label="Stylised ISMS dashboard: sidebar modules, clause tracker and all 93 Annex A controls grouped in four themes" focusable="false">
+<rect class="cv-bg" width="600" height="340"/>
+<rect class="cv-frame" x="24" y="22" width="552" height="296" rx="12"/>
+<rect class="cv-side" x="24" y="22" width="150" height="296" rx="12"/>
+<g class="cv-nav">
+<rect x="40" y="44" width="118" height="22" rx="6" class="is-on"/><rect x="40" y="76" width="96" height="10" rx="3"/><rect x="40" y="98" width="108" height="10" rx="3"/><rect x="40" y="120" width="84" height="10" rx="3"/><rect x="40" y="142" width="100" height="10" rx="3"/><rect x="40" y="164" width="90" height="10" rx="3"/><rect x="40" y="186" width="104" height="10" rx="3"/>
+</g>
+<text class="cv-t cv-t--k" x="40" y="290">ISO/IEC 27001:2022</text>
+<text class="cv-t cv-t--k" x="236" y="50">CLAUSES 4–10</text>
+<g class="cv-clauses"><rect x="236" y="60" width="38" height="28" rx="5"/><text x="255" y="79" text-anchor="middle">4</text><rect x="280" y="60" width="38" height="28" rx="5"/><text x="299" y="79" text-anchor="middle">5</text><rect x="324" y="60" width="38" height="28" rx="5"/><text x="343" y="79" text-anchor="middle">6</text><rect x="368" y="60" width="38" height="28" rx="5"/><text x="387" y="79" text-anchor="middle">7</text><rect x="412" y="60" width="38" height="28" rx="5"/><text x="431" y="79" text-anchor="middle">8</text><rect x="456" y="60" width="38" height="28" rx="5"/><text x="475" y="79" text-anchor="middle">9</text><rect x="500" y="60" width="38" height="28" rx="5"/><text x="519" y="79" text-anchor="middle">10</text></g>
+<text class="cv-t cv-t--k" x="236" y="136">ANNEX A · 93 CONTROLS</text>
+<rect class="cv-cell cv-cell--org" x="236" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="253" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="270" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="287" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="304" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="321" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="338" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="355" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="372" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="389" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="406" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="423" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="440" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="457" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="474" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="491" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="508" y="150" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="236" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="253" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="270" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="287" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="304" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="321" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="338" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="355" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="372" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="389" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="406" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="423" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="440" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="457" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="474" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="491" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="508" y="167" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="236" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="253" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--org" x="270" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="287" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="304" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="321" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="338" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="355" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="372" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="389" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--ppl" x="406" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="423" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="440" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="457" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="474" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="491" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="508" y="184" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="236" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="253" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="270" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="287" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="304" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="321" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="338" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--phy" x="355" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="372" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="389" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="406" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="423" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="440" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="457" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="474" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="491" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="508" y="201" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="236" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="253" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="270" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="287" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="304" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="321" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="338" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="355" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="372" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="389" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="406" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="423" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="440" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="457" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="474" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="491" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="508" y="218" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="236" y="235" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="253" y="235" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="270" y="235" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="287" y="235" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="304" y="235" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="321" y="235" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="338" y="235" width="13" height="13" rx="2.5"/><rect class="cv-cell cv-cell--tec" x="355" y="235" width="13" height="13" rx="2.5"/>
+<g class="cv-legend">
+<rect class="cv-cell--org" x="236" y="284" width="10" height="10" rx="2"/><text x="252" y="293">Organisational 37</text>
+<rect class="cv-cell--ppl" x="352" y="284" width="10" height="10" rx="2"/><text x="368" y="293">People 8</text>
+<rect class="cv-cell--phy" x="430" y="284" width="10" height="10" rx="2"/><text x="446" y="293">Physical 14</text>
+<rect class="cv-cell--tec" x="236" y="300" width="10" height="10" rx="2"/><text x="252" y="309">Technological 34</text>
+</g>
+</svg>
+            <figcaption>Stylised view of the standard's structure: Clauses 4 to 10 and all 93 Annex A controls.</figcaption>
+          </figure>
+        </div>
+        <dl class="facts">
+          <div><dt>Role</dt><dd>Designer and developer</dd></div>
+          <div><dt>Period</dt><dd>Sep 2025 to present</dd></div>
+          <div><dt>Stack</dt><dd>HTML, CSS, JavaScript</dd></div>
+          <div><dt>Licence</dt><dd>MIT</dd></div>
+          <div><dt>Status</dt><dd>Version 2 live; version 1 archived</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="container case">
+      <nav class="toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#preview">Dashboard preview</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#features">Capabilities</a></li>
+          <li><a href="#stack">Technical stack</a></li>
+          <li><a href="#implementation">Implementation</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#links">Repository and demo</a></li>
+          <li><a href="#status">Status</a></li>
+        </ol>
+      </nav>
+
+      <div class="case__body">
+        <section class="case__section" id="overview" aria-labelledby="h-overview">
+          <h2 id="h-overview"><span class="case__n">01</span>Overview</h2>
+          <div class="prose">
+            <p>The ISMS Assurance Platform brings the core artefacts of an ISO/IEC 27001:2022 engagement into a single browser application: the management-system clauses, all 93 Annex A controls, the Statement of Applicability, the risk register, findings and corrective actions, and the evidence behind each conclusion.</p>
+            <p>It is a support tool for auditors and implementers. It does not certify anything, and it is not affiliated with or endorsed by ISO or IEC.</p>
+          </div>
+        </section>
+
+        <section class="case__section" id="problem" aria-labelledby="h-problem">
+          <h2 id="h-problem"><span class="case__n">02</span>Problem and objectives</h2>
+          <div class="feature-grid">
+            <div class="feature feature--orange">
+              <p class="feature__k">Problem</p>
+              <p>ISMS audits and implementations usually run on a patchwork of spreadsheets, templates and email. The SoA lives in one file, the risk register in another and findings in a third, so the links between a risk, the control that treats it, the evidence that proves it works and the finding raised when it does not are easy to lose.</p>
+              <p>Commercial GRC suites solve this, but they are expensive, server-hosted and often a poor fit for a single auditor or a small organisation that cannot send sensitive security data to a third-party cloud.</p>
+            </div>
+            <div class="feature feature--teal">
+              <p class="feature__k">Objectives</p>
+              <ul class="ticks ticks--tight ticks--teal">
+                <li>Cover the full standard: Clauses 4 to 10 and every Annex A control, with ISO/IEC 27002:2022 attributes.</li>
+                <li>Keep risks, controls, SoA entries, findings and evidence connected in one place.</li>
+                <li>Produce audit-ready PDF and spreadsheet outputs without manual reformatting.</li>
+                <li>Keep sensitive working data on the user's own device, with no server and no account.</li>
+                <li>Run anywhere a modern browser runs, with nothing to install.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="case__section" id="preview" aria-labelledby="h-preview">
+          <h2 id="h-preview"><span class="case__n">03</span>Dashboard preview</h2>
+          <p class="case__lede">The platform's main modules, shown as an interactive preview. Select a module in the sidebar. All figures are sample data.</p>
+          <div class="dash panel panel--console" data-tabs data-tab-class="dash__tab">
+            <div class="dash__frame">
+              <div class="dash__side">
+                <p class="dash__brand"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-shield"/></svg>ISMS Assurance</p>
+                <div class="dash__tabs" role="tablist" aria-label="Platform modules" aria-orientation="vertical" data-tablist></div>
+              </div>
+              <div class="dash__main">
+                <div class="dash__top">
+                  <span class="dash__crumb">Sample organisation / <b>ISO/IEC 27001:2022 assessment</b></span>
+                  <span class="sample-flag">Sample data</span>
+                </div>
+
+                <div class="dash__panel" data-tab-panel data-tab-label="Compliance overview" data-tab-icon="i-grid" id="dash-overview">
+                  <h3>Compliance overview</h3>
+                  <div class="kpis">
+                    <div class="kpi"><p class="kpi__k">Annex A controls</p><p class="kpi__v">93</p><p class="kpi__d">Defined by the standard</p></div>
+                    <div class="kpi"><p class="kpi__k">Applicable</p><p class="kpi__v">88</p><p class="kpi__d">Sample value</p></div>
+                    <div class="kpi"><p class="kpi__k">Implemented</p><p class="kpi__v">61</p><p class="kpi__d">Sample value</p></div>
+                    <div class="kpi"><p class="kpi__k">Open findings</p><p class="kpi__v">7</p><p class="kpi__d">Sample value</p></div>
+                  </div>
+                  <div class="dash__grid">
+                    <div class="dash__card">
+                      <h4>Implementation status</h4>
+                      <div class="donut">
+                        <svg viewBox="0 0 120 120" role="img" aria-label="Sample implementation status: 61 implemented, 18 partially implemented, 9 not implemented, 5 not applicable, out of 93 controls">
+                          <circle class="donut__track" cx="60" cy="60" r="48"/>
+                          <circle class="donut__seg donut__seg--a" cx="60" cy="60" r="48" stroke-dasharray="197.8 301.6" transform="rotate(-90 60 60)"/>
+                          <circle class="donut__seg donut__seg--b" cx="60" cy="60" r="48" stroke-dasharray="58.4 301.6" stroke-dashoffset="-197.8" transform="rotate(-90 60 60)"/>
+                          <circle class="donut__seg donut__seg--c" cx="60" cy="60" r="48" stroke-dasharray="29.2 301.6" stroke-dashoffset="-256.2" transform="rotate(-90 60 60)"/>
+                          <circle class="donut__seg donut__seg--d" cx="60" cy="60" r="48" stroke-dasharray="16.2 301.6" stroke-dashoffset="-285.4" transform="rotate(-90 60 60)"/>
+                          <text class="donut__c" x="60" y="62" text-anchor="middle">66%</text>
+                          <text class="donut__s" x="60" y="76" text-anchor="middle">IMPLEMENTED</text>
+                        </svg>
+                        <ul class="dlegend">
+                          <li><i class="i-a"></i>Implemented: 61</li>
+                          <li><i class="i-b"></i>Partially implemented: 18</li>
+                          <li><i class="i-c"></i>Not implemented: 9</li>
+                          <li><i class="i-d"></i>Not applicable: 5</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="dash__card">
+                      <h4>Implemented by Annex A theme</h4>
+                      <div class="bars">
+                        <div class="bar"><p class="bar__l"><span>Organisational (A.5)</span><span>23 / 37</span></p><span class="bar__t"><span class="bar__f w-62"></span></span></div>
+                        <div class="bar"><p class="bar__l"><span>People (A.6)</span><span>6 / 8</span></p><span class="bar__t"><span class="bar__f w-75"></span></span></div>
+                        <div class="bar"><p class="bar__l"><span>Physical (A.7)</span><span>8 / 14</span></p><span class="bar__t"><span class="bar__f w-57"></span></span></div>
+                        <div class="bar"><p class="bar__l"><span>Technological (A.8)</span><span>24 / 34</span></p><span class="bar__t"><span class="bar__f w-71"></span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dash__panel" data-tab-panel data-tab-label="Annex A assessment" data-tab-icon="i-list" id="dash-annex">
+                  <h3>Annex A assessment</h3>
+                  <div class="dash__card dtable-wrap">
+                    <table class="dtable">
+                      <thead><tr><th scope="col">Control</th><th scope="col">Title</th><th scope="col">Theme</th><th scope="col">Status</th></tr></thead>
+                      <tbody>
+                        <tr><th scope="row">A.5.1</th><td>Policies for information security</td><td>Organisational</td><td><span class="st st--ok">Implemented</span></td></tr>
+                        <tr><th scope="row">A.5.15</th><td>Access control</td><td>Organisational</td><td><span class="st st--part">Partial</span></td></tr>
+                        <tr><th scope="row">A.6.3</th><td>Information security awareness, education and training</td><td>People</td><td><span class="st st--ok">Implemented</span></td></tr>
+                        <tr><th scope="row">A.7.2</th><td>Physical entry</td><td>Physical</td><td><span class="st st--ok">Implemented</span></td></tr>
+                        <tr><th scope="row">A.8.8</th><td>Management of technical vulnerabilities</td><td>Technological</td><td><span class="st st--no">Not implemented</span></td></tr>
+                        <tr><th scope="row">A.8.13</th><td>Information backup</td><td>Technological</td><td><span class="st st--part">Partial</span></td></tr>
+                        <tr><th scope="row">A.8.16</th><td>Monitoring activities</td><td>Technological</td><td><span class="st st--part">Partial</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="dash__panel" data-tab-panel data-tab-label="Risk register" data-tab-icon="i-alert" id="dash-risk">
+                  <h3>Risk register</h3>
+                  <div class="dash__grid">
+                    <div class="dash__card">
+                      <h4>Heat map: likelihood × impact</h4>
+                      <div class="heat" role="img" aria-label="Sample five by five heat map with risks concentrated in the high-likelihood, high-impact corner">
+                        <span class="heat__ax">I5</span><span class="h2"></span><span class="h3"></span><span class="h4"><b>1</b></span><span class="h5"></span><span class="h5"></span>
+                        <span class="heat__ax">I4</span><span class="h2"></span><span class="h3"><b>1</b></span><span class="h4"><b>1</b></span><span class="h4"><b>1</b></span><span class="h5"></span>
+                        <span class="heat__ax">I3</span><span class="h1"></span><span class="h2"></span><span class="h3"><b>2</b></span><span class="h4"></span><span class="h4"></span>
+                        <span class="heat__ax">I2</span><span class="h1"></span><span class="h2"><b>1</b></span><span class="h2"></span><span class="h3"></span><span class="h3"></span>
+                        <span class="heat__ax">I1</span><span class="h1"></span><span class="h1"></span><span class="h1"></span><span class="h2"></span><span class="h2"></span>
+                        <span></span><span class="heat__ax">L1</span><span class="heat__ax">L2</span><span class="heat__ax">L3</span><span class="heat__ax">L4</span><span class="heat__ax">L5</span>
+                      </div>
+                    </div>
+                    <div class="dash__card dtable-wrap">
+                      <h4>Top risks</h4>
+                      <table class="dtable">
+                        <thead><tr><th scope="col">ID</th><th scope="col">Risk</th><th scope="col">Score</th><th scope="col">Controls</th></tr></thead>
+                        <tbody>
+                          <tr><th scope="row">R-01</th><td>Unpatched internet-facing systems</td><td><span class="st st--no">16 High</span></td><td><span class="ref">A.8.8</span></td></tr>
+                          <tr><th scope="row">R-02</th><td>Excessive privileged access</td><td><span class="st st--no">15 High</span></td><td><span class="ref">A.8.2</span></td></tr>
+                          <tr><th scope="row">R-03</th><td>Backup restores never tested</td><td><span class="st st--part">12 Medium</span></td><td><span class="ref">A.8.13</span></td></tr>
+                          <tr><th scope="row">R-04</th><td>Cloud service misconfiguration</td><td><span class="st st--part">8 Medium</span></td><td><span class="ref">A.5.23</span></td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dash__panel" data-tab-panel data-tab-label="Statement of Applicability" data-tab-icon="i-file" id="dash-soa">
+                  <h3>Statement of Applicability</h3>
+                  <div class="dash__card dtable-wrap">
+                    <table class="dtable">
+                      <thead><tr><th scope="col">Control</th><th scope="col">Applicable</th><th scope="col">Justification</th><th scope="col">Implementation</th><th scope="col">Risks</th></tr></thead>
+                      <tbody>
+                        <tr><th scope="row">A.5.15</th><td>Yes</td><td>Access to information must follow business need</td><td><span class="st st--part">Partial</span></td><td>R-02</td></tr>
+                        <tr><th scope="row">A.5.23</th><td>Yes</td><td>Core services hosted with a cloud provider</td><td><span class="st st--part">Partial</span></td><td>R-04</td></tr>
+                        <tr><th scope="row">A.7.10</th><td>Yes</td><td>Removable media used for offsite transfers</td><td><span class="st st--ok">Implemented</span></td><td>None</td></tr>
+                        <tr><th scope="row">A.8.13</th><td>Yes</td><td>Business data must be recoverable</td><td><span class="st st--part">Partial</span></td><td>R-03</td></tr>
+                        <tr><th scope="row">A.8.30</th><td>No</td><td>No outsourced development in scope</td><td><span class="st st--na">Not applicable</span></td><td>None</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="dash__panel" data-tab-panel data-tab-label="Findings and CAPA" data-tab-icon="i-check" id="dash-findings">
+                  <h3>Findings and corrective actions</h3>
+                  <div class="dash__card dtable-wrap">
+                    <table class="dtable">
+                      <thead><tr><th scope="col">ID</th><th scope="col">Type</th><th scope="col">Finding</th><th scope="col">Corrective action</th><th scope="col">Status</th></tr></thead>
+                      <tbody>
+                        <tr><th scope="row">NC-01</th><td>Minor nonconformity</td><td>Privileged access reviews not evidenced for one quarter (A.5.18)</td><td>Quarterly review with documented sign-off</td><td><span class="st st--no">Open</span></td></tr>
+                        <tr><th scope="row">OBS-01</th><td>Observation</td><td>Backup restore test overdue (A.8.13)</td><td>Schedule and record restore test</td><td><span class="st st--part">In progress</span></td></tr>
+                        <tr><th scope="row">OFI-01</th><td>Opportunity for improvement</td><td>Leaver process relies on manual email (A.5.18)</td><td>Automate HR leaver feed</td><td><span class="st st--na">Planned</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="dash__panel" data-tab-panel data-tab-label="Evidence" data-tab-icon="i-folder" id="dash-evidence">
+                  <h3>Evidence management</h3>
+                  <div class="dash__card dtable-wrap">
+                    <table class="dtable">
+                      <thead><tr><th scope="col">Reference</th><th scope="col">Evidence</th><th scope="col">Type</th><th scope="col">Supports</th></tr></thead>
+                      <tbody>
+                        <tr><th scope="row">EV-014</th><td>Privileged access review export</td><td>System report</td><td><span class="ref">A.5.18</span></td></tr>
+                        <tr><th scope="row">EV-021</th><td>Vulnerability scan summary</td><td>Tool output</td><td><span class="ref">A.8.8</span></td></tr>
+                        <tr><th scope="row">EV-033</th><td>Disaster recovery test report</td><td>Document</td><td><span class="ref">A.5.30</span></td></tr>
+                        <tr><th scope="row">EV-040</th><td>Awareness training completion records</td><td>System report</td><td><span class="ref">A.6.3</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="dash__panel" data-tab-panel data-tab-label="Reporting" data-tab-icon="i-chart" id="dash-reporting">
+                  <h3>Reporting</h3>
+                  <ul class="exports">
+                    <li><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-file"/></svg><b>PDF report</b><span>Audit report and Statement of Applicability, ready for management or a certification body.</span></li>
+                    <li><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-grid"/></svg><b>Excel workbook</b><span>Risk register, SoA and findings in a format auditors already use.</span></li>
+                    <li><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-archive"/></svg><b>JSON backup</b><span>Move an assessment between devices or keep a versioned copy alongside the audit file.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p class="dash__note"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"/></svg><span>Illustrative preview built for this page with sample data. It is not a screenshot of the platform and contains no real compliance results, client names or customer data. Control numbers and titles are from ISO/IEC 27001:2022 Annex A.</span></p>
+          </div>
+
+        </section>
+
+        <section class="case__section" id="architecture" aria-labelledby="h-architecture">
+          <h2 id="h-architecture"><span class="case__n">04</span>Architecture</h2>
+          <figure class="panel panel--console diagram">
+            <div class="diagram__body diagram__body--scroll" tabindex="0" role="group" aria-label="Architecture diagram, scrolls sideways on small screens">
+<svg viewBox="0 0 960 440" role="img" aria-labelledby="dg1-t dg1-d">
+              <title id="dg1-t">ISMS Assurance Platform architecture</title>
+              <desc id="dg1-d">Six assessment modules feed shared assessment logic, which saves working data to browser storage and produces PDF, Excel and JSON outputs. Everything runs inside the user's browser.</desc>
+              <defs><marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 L10 5 L0 10 z"/></marker></defs>
+              <rect class="dg-zone" x="16" y="16" width="704" height="408" rx="14"/>
+              <text class="dg-z" x="36" y="44">Runs entirely in the user's browser</text>
+              <text class="dg-z" x="40" y="74">Assessment modules</text>
+              <rect class="dg-box dg-box--cyan" x="40" y="86" width="206" height="52" rx="8"/><text class="dg-t" x="56" y="117">Compliance dashboard</text>
+              <rect class="dg-box dg-box--cyan" x="262" y="86" width="206" height="52" rx="8"/><text class="dg-t" x="278" y="117">Clauses 4 to 10</text>
+              <rect class="dg-box dg-box--cyan" x="484" y="86" width="212" height="52" rx="8"/><text class="dg-t" x="500" y="117">Annex A: 93 controls</text>
+              <rect class="dg-box dg-box--cyan" x="40" y="150" width="206" height="52" rx="8"/><text class="dg-t" x="56" y="181">Risk register, heat map</text>
+              <rect class="dg-box dg-box--cyan" x="262" y="150" width="206" height="52" rx="8"/><text class="dg-t" x="278" y="181">Statement of Applicability</text>
+              <rect class="dg-box dg-box--cyan" x="484" y="150" width="212" height="52" rx="8"/><text class="dg-t" x="500" y="181">Findings, CAPA, evidence</text>
+              <path class="dg-line" d="M368 206 V250" marker-end="url(#ah1)"/>
+              <rect class="dg-box dg-box--teal" x="40" y="256" width="656" height="64" rx="8"/>
+              <text class="dg-t" x="56" y="282">Assessment logic</text>
+              <text class="dg-s" x="56" y="304">Likelihood × impact scoring, applicability, readiness and maturity indicators, charts</text>
+              <path class="dg-line" d="M200 324 V354" marker-end="url(#ah1)"/>
+              <rect class="dg-box" x="40" y="360" width="320" height="50" rx="8"/>
+              <text class="dg-t" x="56" y="382">Browser storage</text><text class="dg-s" x="56" y="400">Working data stays on the device</text>
+              <path class="dg-line dg-flow" d="M696 288 H736 V120 H770" marker-end="url(#ah1)"/>
+              <path class="dg-line dg-flow" d="M736 210 H770" marker-end="url(#ah1)"/>
+              <path class="dg-line dg-flow" d="M360 385 H736 V300 H770" marker-end="url(#ah1)"/>
+              <text class="dg-z" x="776" y="74">Outputs</text>
+              <rect class="dg-box" x="776" y="94" width="168" height="52" rx="8"/><text class="dg-t" x="792" y="117">PDF report</text><text class="dg-s" x="792" y="135">Audit report, SoA</text>
+              <rect class="dg-box" x="776" y="184" width="168" height="52" rx="8"/><text class="dg-t" x="792" y="207">Excel workbook</text><text class="dg-s" x="792" y="225">Registers, SoA</text>
+              <rect class="dg-box" x="776" y="274" width="168" height="52" rx="8"/><text class="dg-t" x="792" y="297">JSON backup</text><text class="dg-s" x="792" y="315">Restore on any device</text>
+            </svg>
+            </div>
+            <figcaption>Conceptual architecture based on the documented features. The platform has no server component.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case__section" id="features" aria-labelledby="h-features">
+          <h2 id="h-features"><span class="case__n">05</span>Key capabilities</h2>
+          <div class="feature-grid feature-grid--3">
+            <div class="feature"><h3>Clauses 4 to 10</h3><p>Requirements checklist and conformity assessment, with evidence and rationale recorded per requirement.</p></div>
+            <div class="feature"><h3>Annex A assessment</h3><p>All 93 controls across the organisational, people, physical and technological themes, with ISO/IEC 27002:2022 attributes.</p></div>
+            <div class="feature"><h3>Statement of Applicability</h3><p>Applicability, justification, implementation status and risk references for every control.</p></div>
+            <div class="feature"><h3>Risk register</h3><p>Likelihood × impact scoring, treatment, residual risk tracking and heat-map views.</p></div>
+            <div class="feature"><h3>Findings and corrective actions</h3><p>Nonconformities, observations and improvement opportunities, each tracked to remediation.</p></div>
+            <div class="feature"><h3>Evidence management</h3><p>Evidence references tracked for internal and external audits.</p></div>
+            <div class="feature"><h3>Compliance dashboard</h3><p>Readiness and maturity indicators for monitoring and management review.</p></div>
+            <div class="feature"><h3>PDF and Excel reporting</h3><p>Audit report and SoA outputs ready to share with management or a certification body.</p></div>
+            <div class="feature"><h3>Local-first data, JSON backup</h3><p>Working data stays in the browser; export a JSON backup to move or version an assessment.</p></div>
+          </div>
+        </section>
+
+        <section class="case__section" id="stack" aria-labelledby="h-stack">
+          <h2 id="h-stack"><span class="case__n">06</span>Technical stack</h2>
+          <div class="stack">
+            <div class="stack__layer"><h3>Interface</h3><ul class="tags"><li>HTML5</li><li>CSS3</li><li>Vanilla JavaScript</li></ul></div>
+            <div class="stack__layer"><h3>Visualisation</h3><ul class="tags"><li>Chart.js</li><li>Risk heat map</li></ul></div>
+            <div class="stack__layer"><h3>Reporting</h3><ul class="tags"><li>jsPDF</li><li>SheetJS</li></ul></div>
+            <div class="stack__layer"><h3>Data</h3><ul class="tags"><li>Browser storage</li><li>JSON import and export</li></ul></div>
+            <div class="stack__layer"><h3>Hosting</h3><ul class="tags"><li>GitHub Pages</li><li>Static, no backend</li></ul></div>
+          </div>
+        </section>
+
+        <section class="case__section" id="implementation" aria-labelledby="h-implementation">
+          <h2 id="h-implementation"><span class="case__n">07</span>Implementation</h2>
+          <div class="prose">
+            <p>The platform is a static web application with no build step, hosted on GitHub Pages. Each module works on a shared assessment model, so a risk in the register can reference the Annex A controls that treat it, and those controls carry their applicability, implementation status and evidence through to the SoA and the final report.</p>
+            <p>Charting, spreadsheet and PDF generation are handled by established open-source libraries rather than custom code, which keeps the application small and the outputs in formats auditors already use.</p>
+            <p>Version 1, published as the <a href="https://github.com/Marsellino-Nasry/iso27001-platform" target="_blank" rel="noopener noreferrer">ISO 27001 Ultimate Platform<span class="visually-hidden"> (opens in a new tab)</span></a>, established the Annex A, SoA, risk register and reporting core. Version 2 reorganised the product as the ISMS Assurance Platform, adding the clause-level conformity assessment, the findings workflow and maturity indicators.</p>
+          </div>
+        </section>
+
+        <section class="case__section" id="security" aria-labelledby="h-security">
+          <h2 id="h-security"><span class="case__n">08</span>Security considerations</h2>
+          <div class="feature-grid">
+            <div class="feature"><h3>Data residency</h3><p>Assessment data is held in the user's browser and only leaves the device when the user exports it.</p></div>
+            <div class="feature"><h3>No accounts</h3><p>There are no credentials to steal and no multi-tenant database to breach.</p></div>
+            <div class="feature"><h3>Backups are the user's responsibility</h3><p>Clearing browser data removes working data, so regular JSON exports are recommended.</p></div>
+            <div class="feature"><h3>Third-party libraries</h3><p>Some libraries load from public CDNs. Organisations with strict policies should self-host them and review the source, as the repository README advises.</p></div>
+            <div class="feature"><h3>Sample outputs</h3><p>Sample reports in the repository are fictional and should be labelled as demonstrations when shared.</p></div>
+          </div>
+        </section>
+
+        <section class="case__section" id="screenshots" aria-labelledby="h-screenshots">
+          <h2 id="h-screenshots"><span class="case__n">09</span>Screenshots</h2>
+          <p class="callout callout--blue"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-file"/></svg><span>The preview above is an illustration with sample data, not a screenshot. The live platform is public, so the most accurate view is the application itself; the repository README also includes product images.</span></p>
+        </section>
+
+        <section class="case__section" id="links" aria-labelledby="h-links">
+          <h2 id="h-links"><span class="case__n">10</span>Repository and live demo</h2>
+          <div class="links-list">
+            <a href="https://marsellino-nasry.github.io/iso27001v.2-platform/" target="_blank" rel="noopener noreferrer"><span><b>Live platform, version 2</b><span>marsellino-nasry.github.io/iso27001v.2-platform</span></span><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+            <a href="https://github.com/Marsellino-Nasry/iso27001v.2-platform" target="_blank" rel="noopener noreferrer"><span><b>Source code, version 2</b><span>github.com/Marsellino-Nasry/iso27001v.2-platform</span></span><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-code"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+            <a href="https://github.com/Marsellino-Nasry/iso27001-platform" target="_blank" rel="noopener noreferrer"><span><b>Version 1: ISO 27001 Ultimate Platform</b><span>github.com/Marsellino-Nasry/iso27001-platform</span></span><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-code"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+          </div>
+        </section>
+
+        <section class="case__section" id="status" aria-labelledby="h-status">
+          <h2 id="h-status"><span class="case__n">11</span>Development status</h2>
+          <div class="prose"><p><strong>Active.</strong> Version 2 is live and open source under the MIT licence. Version 1 remains available for reference. The project is an independent portfolio project and is not a commercial product.</p></div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container">
+      <nav class="pager" aria-label="More projects">
+        <a href="chrome-password-extractor.html"><span>Previous project</span><b>Chrome Password Extractor</b></a>
+        <a href="sarm-security-arsenal.html"><span>Next project</span><b>SARM Security Arsenal</b></a>
+      </nav>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__cta">
+        <p class="site-footer__line">Bridging enterprise technology risk assurance with hands-on offensive security.</p>
+        <div class="site-footer__actions">
+          <a class="btn btn--primary" href="../assets/docs/Marsellino_Nasry_CV.pdf" download="Marsellino_Nasry_CV.pdf" type="application/pdf"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-download"/></svg>Download CV<span class="visually-hidden"> (PDF)</span></a>
+          <a class="btn btn--ghost" href="../cv.html"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-eye"/></svg>View CV</a>
+          <a class="btn btn--quiet" href="../#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../assets/img/sarm-logo.svg" width="176" height="49" alt="SARM Security" loading="lazy" decoding="async">
+          <p>The personal site of Marsellino Nasry Mounir. SARM is the name I use for my independent security engineering and research work.</p>
+          <p class="site-footer__disclaimer">Views and projects on this site are my own and do not represent BDO Khaled &amp; Co. Audit evidence and client findings are never published. Diagrams marked illustrative or conceptual do not depict any client environment.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <div>
+            <h2 class="site-footer__h">Profile</h2>
+            <ul>
+              <li><a href="../#about">About</a></li>
+              <li><a href="../#method">Dual-Lens method</a></li>
+              <li><a href="../#experience">Experience</a></li>
+              <li><a href="../#frameworks">Frameworks</a></li>
+              <li><a href="../#credentials">Credentials</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="site-footer__h">Projects</h2>
+            <ul>
+              <li><a href="../projects/isms-assurance-platform.html">ISMS Assurance Platform</a></li>
+              <li><a href="../projects/sarm-security-arsenal.html">SARM Security Arsenal</a></li>
+              <li><a href="../projects/network-x.html">Network-X</a></li>
+              <li><a href="../projects/chrome-password-extractor.html">Chrome Password Extractor</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="site-footer__h">Documents</h2>
+            <ul>
+              <li><a href="../cv.html">View CV online</a></li>
+              <li><a href="../cv.html#cv-pdf">CV PDF viewer</a></li>
+              <li><a href="../assets/docs/Marsellino_Nasry_CV.pdf" download="Marsellino_Nasry_CV.pdf" type="application/pdf">Download CV (PDF)</a></li>
+              <li><a href="../capability-statement.html">Capability statement</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="site-footer__h">Elsewhere</h2>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/marsellino-nasry/" rel="noopener noreferrer" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+              <li><a href="https://github.com/Marsellino-Nasry" rel="noopener noreferrer" target="_blank">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+              <li><a href="https://tryhackme.com/p/Marsellino" rel="noopener noreferrer" target="_blank">TryHackMe<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+              <li><a href="https://hackerone.com/marsellino1" rel="noopener noreferrer" target="_blank">HackerOne<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+              <li><a href="https://linktr.ee/Marsellino.Nasry" rel="noopener noreferrer" target="_blank">Linktree<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="site-footer__base">
+        <p>&copy; <span data-year>2026</span> Marsellino Nasry Mounir · Cairo, Egypt</p>
+        <a href="#top" class="site-footer__top">Back to top <svg class="icon icon--sm" aria-hidden="true"><use href="../assets/img/icons.svg#i-up"/></svg></a>
+      </div>
+    </div>
+    <a class="to-top" href="#top" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-up"/></svg></a>
+  </footer>
+</body>
+</html>
